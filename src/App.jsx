@@ -1,22 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 import MainPage from './components/MainPage';
-import Artwork000 from './components/Artwork000';
-import Artwork001 from './components/Artwork001';
-import Artwork002 from './components/Artwork002';
-import Artwork003 from './components/Artwork003';
-import Artwork004 from './components/Artwork004';
-import logo from './img/seoularts.png';
+import Artists from './components/Artists';
+import Artwork000 from './components/Artworks/Artwork000';
+import Artwork001 from './components/Artworks/Artwork001';
+import Artwork002 from './components/Artworks/Artwork002';
+import Artwork003 from './components/Artworks/Artwork003';
+import Artwork004 from './components/Artworks/Artwork004';
+
+import Buttons from './components/Buttons';
 
 const App = () => {
 
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 1000);
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 1200);
+  const [isNarrowScreen, setIsNarrowScreen] = useState(window.innerWidth <= 1050);
   const [activeButton, setActiveButton] = useState('');
+
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   // 가변폭
   useEffect(() => {
     const handleResize = () => {
-      setIsWideScreen(window.innerWidth >= 1000);
+      setIsWideScreen(window.innerWidth >= 1200);
+      setIsNarrowScreen(window.innerWidth <= 1050);
     };
 
     window.addEventListener('resize', handleResize);
@@ -38,77 +49,43 @@ const App = () => {
     setActiveButton(buttonName);
     localStorage.setItem('activeButton', buttonName);
   };
+
   return (
     <BrowserRouter>
       <div className="app-container">
         <div className="menu">
           <nav>
-            <div className="button-container">
-              <Link to="/"
-                style={{ display: 'flex', alignItems: 'center'}}
-                onClick={() => handleButtonClick('main')}>
-                <img src={logo} alt="Logo" className="button-image-title" />
-                {isWideScreen ? <h1>고민중</h1> : ''}
-              </Link>
+            {isNarrowScreen ?
+              <div className="button-container">
+                <div className="menu">
+                  <Link className="button" onClick={toggleExpand}>
+                  {!isExpanded ? '메뉴 펼치기' : '메뉴 접기'}
+                  </Link>
+                  {isExpanded && (
+                    <div className="expanded-buttons">
+                      <Buttons 
+                      activeButton={activeButton}
+                      handleButtonClick={handleButtonClick}
+                      isWideScreen={isWideScreen}/>
+                    </div>
+                  )}
+                </div>
+              </div>
 
-              <Link to="/"
-                className={`button ${activeButton === 'main' ? 'active' : ''}`}
-                onClick={() => handleButtonClick('main')}
-              >
-              {isWideScreen ? '메인: 작품 개요' : '작품 개요'}
-              </Link>
-
-              <Link to="/000"
-                className={`button ${activeButton === '000' ? 'active' : ''}`}
-                onClick={() => handleButtonClick('000')}
-              >
-                {isWideScreen ? '000: 밧줄 당기기' : '밧줄'}
-              </Link>
-
-              <Link to="/001"
-                className={`button ${activeButton === '001' ? 'active' : ''}`}
-                onClick={() => handleButtonClick('001')}
-              >
-                {isWideScreen ? '001: 서랍 당기기' : '서랍'}
-              </Link>
-
-              <Link to="/002"
-                className={`button ${activeButton === '002' ? 'active' : ''}`}
-                onClick={() => handleButtonClick('002')}
-              >
-                {isWideScreen ? '002: 방문 당기기' : '방문'}
-              </Link>
-
-              <Link to="/003"
-                className={`button ${activeButton === '003' ? 'active' : ''}`}
-                onClick={() => handleButtonClick('003')}
-              >
-                {isWideScreen ? '003: ??? 당기기' : '미정'}
-              </Link>
-
-              <Link to="/004"
-                className={`button ${activeButton === '004' ? 'active' : ''}`}
-                onClick={() => handleButtonClick('004')}
-              >
-                {isWideScreen ? '004: USB 당기기' : 'USB'}
-              </Link>
-              
-              {isWideScreen && (
-                <Link to="https://instagram.com/digitalartsfestival_sia"
-                target="blank" rel="noreferrer noopener"
-                  style={{ display: 'flex', alignItems: 'center' }}
-                  onClick={() => handleButtonClick('main')}>
-                  <img src={logo} alt="Logo" className="button-image-caption" />
-                  {isWideScreen ? '디지털아트페스티벌 공식 인스타그램' : ''}
-                </Link>
+              : (
+                <div className="button-container">
+                  <Buttons className="button-container"
+                  activeButton={activeButton}
+                  handleButtonClick={handleButtonClick}
+                  isWideScreen={isWideScreen}/>
+                </div>
               )}
-              
-            </div>
           </nav>
         </div>
         <div className="main-content">
           <Routes>
             <Route path="/" element={<MainPage />} />
+            <Route path="/artists" element={<Artists />} />
             <Route path="/000" element={<Artwork000 />} />
             <Route path="/001" element={<Artwork001 />} />
             <Route path="/002" element={<Artwork002 />} />
