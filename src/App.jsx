@@ -15,7 +15,7 @@ const App = () => {
 
   const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 1250);
   const [isNarrowScreen, setIsNarrowScreen] = useState(window.innerWidth <= 1050);
-  const [activeButton, setActiveButton] = useState('');
+  const [activeButton, setActiveButton] = useState('main');
 
   const [isExpanded, setIsExpanded] = useState(false);
 
