@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/considering-2023diaf-web/static/css/main.1263d169.css",
-    "main.js": "/considering-2023diaf-web/static/js/main.4558b3f0.js",
+    "main.js": "/considering-2023diaf-web/static/js/main.c2d5b030.js",
     "static/js/787.fb798993.chunk.js": "/considering-2023diaf-web/static/js/787.fb798993.chunk.js",
     "static/media/양선아.png": "/considering-2023diaf-web/static/media/양선아.13140b83df7dfad1fbd3.png",
     "static/media/이은정.png": "/considering-2023diaf-web/static/media/이은정.04ebdf39f1f5c2bc1fca.png",
@@ -11,11 +11,11 @@
     "static/media/seoularts.png": "/considering-2023diaf-web/static/media/seoularts.b3a904c33c6b4c50dc69.png",
     "index.html": "/considering-2023diaf-web/index.html",
     "main.1263d169.css.map": "/considering-2023diaf-web/static/css/main.1263d169.css.map",
-    "main.4558b3f0.js.map": "/considering-2023diaf-web/static/js/main.4558b3f0.js.map",
+    "main.c2d5b030.js.map": "/considering-2023diaf-web/static/js/main.c2d5b030.js.map",
     "787.fb798993.chunk.js.map": "/considering-2023diaf-web/static/js/787.fb798993.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1263d169.css",
-    "static/js/main.4558b3f0.js"
+    "static/js/main.c2d5b030.js"
   ]
 }
