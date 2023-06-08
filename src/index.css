@@ -5,6 +5,7 @@ body {
   font-size: 18px;
   justify-content: center;
   border-bottom: 2px solid #ccc;
+  background-color: #eee;
 }
 
 .app-container {
@@ -23,16 +24,17 @@ a {
   text-align: justify;
 }
 
-.profile {
+.profile-left {
   text-align: left;
   padding-bottom: 50px;
 }
-.profile:nth-child(odd) {
+.profile-right {
   text-align: right;
+  padding-bottom: 50px;
 }
 
 .profile-image {
-  width: 50%;
+  width: 500px;
 }
 
 .divide {
@@ -54,13 +56,21 @@ a {
   border-bottom: 2px solid #ccc;
 }
 
+.category {
+  width: 2px;
+  height: 25%;
+  background-color: #ccc;
+}
+
 .button {
   display: inline-block;
   text-align: center;
   width: 75px;
+  height: 20px;
   padding: 20px;
   margin: 10px;
   border-radius: 20px;
+  font-weight: 700;
   background-color: #fff;
   transition: background-color 0.3s ease;
 }
@@ -89,20 +99,26 @@ a {
   align-items: center;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   .app-container {
     flex-direction: row;
   }
 
   .menu {
-    display: flex;
-    position: fixed;
     width: 350px;
     height: 100vh;
     flex-direction: column;
     align-items: flex-start;
     justify-content: left;
-    border-right: 2px solid #ccc;
+  }
+
+  .category {
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 10px 0 5px 25px;
+    font-size: 24px;
+    font-weight: 800;
   }
 
   .title {
@@ -115,14 +131,13 @@ a {
     align-items: center;
     text-align: left;
     width: 275px;
-    height: 20px;
+    margin: 2.5px auto 2.5px auto;
   }
 
   .button-image-title {
     width: 60px;
     padding: 0 10px 0 10px;
   }
-
 
   .button-container {
     display: flex;
@@ -134,31 +149,55 @@ a {
 
   .main-content {
     width: 100%;
-    margin: 0 50px 0 400px;
+    max-width: 1300px;
+    margin: 50px 50px 0 400px;
   }
 }
 @media screen and (max-width: 1050px) {
-  .button {
-    width: 200px;
+
+  .menu-narrow {
+    display: flex;
+    width: 100%;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    transition: transform 0.6s ease;
   }
-}
 
-.expanded-buttons {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  padding: 10px;
-}
+  .button {
+    width: 300px;
+  }
 
-.button-row {
-  opacity: 1;
-  transform: translateY(-20px);
-}
+  .button-container {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.6s ease;
+  }
 
-.button-row.show {
-  opacity: 1;
-  transform: translateY(0);
+  .button-container-narrow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateY(-1000px);
+    transition: transform 0.6s ease;
+  }
+
+  .button-container-narrow.expanded-buttons {
+    top: 100%;
+    width: 100%;
+    transform: translateY(50px);
+    transition: transform 0.6s ease;
+  }
 }

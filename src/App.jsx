@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 
 import MainPage from './components/MainPage';
 import Artists from './components/Artists';
@@ -13,7 +13,7 @@ import Buttons from './components/Buttons';
 
 const App = () => {
 
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 1200);
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 1250);
   const [isNarrowScreen, setIsNarrowScreen] = useState(window.innerWidth <= 1050);
   const [activeButton, setActiveButton] = useState('');
 
@@ -23,11 +23,15 @@ const App = () => {
     setIsExpanded(!isExpanded);
   };
 
+
   // 가변폭
   useEffect(() => {
     const handleResize = () => {
-      setIsWideScreen(window.innerWidth >= 1200);
+      setIsWideScreen(window.innerWidth >= 1250);
       setIsNarrowScreen(window.innerWidth <= 1050);
+      if (window.innerWidth > 1050) {
+        setIsExpanded(false);
+      }
     };
 
     window.addEventListener('resize', handleResize);
@@ -51,33 +55,39 @@ const App = () => {
   };
 
   return (
-    <HashRouter>
+    <div>
       <div className="app-container">
         <div className="menu">
           <nav>
             {isNarrowScreen ?
               <div className="button-container">
-                <div className="menu">
-                  <Link className="button" onClick={toggleExpand}>
-                  {!isExpanded ? '메뉴 펼치기' : '메뉴 접기'}
+                <div><div>
+                </div>
+                  <div className="category" />
+                  <Link className={`button ${activeButton === 'expand' ? 'active' : ''}`} onClick={toggleExpand}>
+                    {!isExpanded ? '페이지 메뉴 펼치기' : '페이지 메뉴 접기'}
                   </Link>
-                  {isExpanded && (
-                    <div className="expanded-buttons">
-                      <Buttons 
+                  <div className="category" />
+                </div>
+                <div>
+                  <div className={`button-container-narrow ${isExpanded ? 'expanded-buttons' : ''}`}>
+                    <Buttons
                       activeButton={activeButton}
                       handleButtonClick={handleButtonClick}
-                      isWideScreen={isWideScreen}/>
-                    </div>
-                  )}
+                      isWideScreen={isWideScreen}
+                      isNarrowScreen={isNarrowScreen}
+                      setIsExpanded={setIsExpanded} />
+                  </div>
+                  {/* )} */}
                 </div>
               </div>
 
               : (
                 <div className="button-container">
-                  <Buttons className="button-container"
-                  activeButton={activeButton}
-                  handleButtonClick={handleButtonClick}
-                  isWideScreen={isWideScreen}/>
+                  <Buttons
+                    activeButton={activeButton}
+                    handleButtonClick={handleButtonClick}
+                    isWideScreen={isWideScreen} />
                 </div>
               )}
           </nav>
@@ -94,7 +104,7 @@ const App = () => {
           </Routes>
         </div>
       </div>
-    </HashRouter>
+    </div>
   );
 };
 
