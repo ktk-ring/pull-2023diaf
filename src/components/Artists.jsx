@@ -25,42 +25,46 @@ const Artists = () => {
 
         <div className="profile">
           <img className="profile-image"
-            src={이세찬}></img>
-          <h3>일세찬</h3>
-          <h4>팀장, 기획, 아트, 테크 등 총괄</h4>
+            src={이세찬} alt="이세찬"></img>
+          <h3>팀장 일세찬</h3>
+          <h4>2023012<br/>
+              기획, 아트, 테크 등 총괄</h4>
           <p>세부 설명이 여기에 들어갑니다.</p>
         </div>
 
         <div className="profile">
           <img className="profile-image"
-            src={양선아}></img>
-          <h3>양선아</h3>
-          <h4>아트, 테크</h4>
+            src={양선아} alt="양선아"></img>
+          <h3>팀원 양선아</h3>
+          <h4>2023011<br/>
+              아트 및 테크 담당</h4>
           <p>세부 설명이 여기에 들어갑니다.</p>
         </div>
 
         <div className="profile">
           <img className="profile-image"
-            src={이은정}></img>
-          <h3>이은정</h3>
-          <h4>아트, 테크
-          </h4>
+            src={이은정} alt="이은정"></img>
+          <h3>팀원 이은정</h3>
+          <h4>2123041<br/>
+              아트 및 테크 담당</h4>
           <p>세부 설명이 여기에 들어갑니다.</p>
         </div>
 
         <div className="profile">
           <img className="profile-image"
-            src={김동호}></img>
-          <h3>김동호</h3>
-          <h4>기획, 아트</h4>
+            src={김동호} alt="김동호"></img>
+          <h3>팀원 김동호</h3>
+          <h4>2223014<br/>
+              기획 및 아트 담당</h4>
           <p>세부 설명이 여기에 들어갑니다.</p>
         </div>
 
         <div className="profile">
           <img className="profile-image"
-            src={김태균}></img>
-          <h3>김태균</h3>
-          <h4>테크</h4>
+            src={김태균} alt="김태균"></img>
+          <h3>팀원 김태균</h3>
+          <h4>2223007<br/>
+              테크 담당</h4>
           <p>세부 설명이 여기에 들어갑니다.</p>
         </div>
       </div>
