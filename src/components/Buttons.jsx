@@ -1,21 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from '../img/seoularts.png';
+import seoularts from '../img/seoularts.png';
+import pull from '../img/Logo_F3F3F3.png';
+import DIAF2023 from '../img/DIAF2023_Profile.webp';
+import Instagram from '../img/Instagram.png';
+import YouTube from '../img/YouTube.png';
 
 const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen, setIsExpanded }) => {
 
-
   return (
-    <div className={`${!isNarrowScreen ? 'menu' : 'menu-narrow'}`} style={{ transition: 'all 0.6s ease' }}>
+    <div className={`${!isNarrowScreen ? 'menu' : 'menu-narrow'}`}>
       {!isNarrowScreen && (
         <div>
           <Link to="/"
             className="title"
             style={{ alignItems: "center" }}
             onClick={() => handleButtonClick('main')}>
-            <img src={logo} alt="Logo" className="button-image-title" />
-            {isWideScreen ? <h1 style={{ marginLeft: 5 }}>고민중, &lt;당기시오&gt;</h1> : ''}
+            <img src={pull} alt="Logo" className="button-image-title" />
           </Link>
         </div>)}
 
@@ -29,13 +31,13 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
         {isWideScreen || isNarrowScreen ? '<당기시오> 작가 노트' : '작가 노트'}
       </Link>
 
-      <Link to="/artists"
-        className={`button ${activeButton === 'artists' ? 'active' : ''}`}
+      <Link to="/artist"
+        className={`button ${activeButton === 'artist' ? 'active' : ''}`}
         onClick={() => {
-          handleButtonClick('artists')
+          handleButtonClick('artist')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '고민중 팀 및 작가 소개' : '작가 소개'}
+        {isWideScreen || isNarrowScreen ? '고민중 팀 및 작가 소개' : '팀 및 작가 소개'}
       </Link>
 
       <div className="category">{isWideScreen ? '작품 상세' : ''}</div>
@@ -45,7 +47,7 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           handleButtonClick('000')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '#00: 밧줄 당기기' : '#00 밧줄'}
+        {isWideScreen || isNarrowScreen ? '#000: 봄 맞이하기' : '봄 맞이하기'}
       </Link>
 
       <Link to="/001"
@@ -54,7 +56,7 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           handleButtonClick('001')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '#01: 서랍 당기기' : '#01 서랍'}
+        {isWideScreen || isNarrowScreen ? '#001: 서랍 당겨보기' : '서랍 당겨보기'}
       </Link>
 
       <Link to="/002"
@@ -63,7 +65,7 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           handleButtonClick('002')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '#02: 방문 당기기' : '#02 방문'}
+        {isWideScreen || isNarrowScreen ? '#002: 문 열어보기' : '문 열어보기'}
       </Link>
 
       <Link to="/003"
@@ -72,7 +74,7 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           handleButtonClick('003')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '#03: ??? 당기기' : '#03 미정'}
+        {isWideScreen || isNarrowScreen ? '#003: ??? 당겨보기' : '???'}
       </Link>
 
       <Link to="/004"
@@ -81,7 +83,7 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           handleButtonClick('004')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '#04: USB 당기기' : '#04 USB'}
+        {isWideScreen || isNarrowScreen ? '#004: 고민 담아가기' : '고민 담아가기'}
       </Link>
 
 
@@ -92,28 +94,35 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           <Link to="https://instagram.com/1il.sechan"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={logo} alt="Instagram" className="external-link" />
-            고민중 인스타그램 (1il.sechan)
+            <img src={Instagram} alt="Instagram" className="external-link" />
+            고민중 인스타그램 @1il.sechan
           </Link>
 
           <Link to="https://www.youtube.com/@DIAF_ENTER"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={logo} alt="YouTube" className="external-link" />
-            디지털아트페스티벌 유튜브 채널
+            <img src={DIAF2023} alt="DIAF" className="external-link" style={{ borderRadius: '25%' }}/>
+            디지털아트페스티벌 웹사이트
+          </Link>
+
+          <Link to="https://www.youtube.com/@DIAF_ENTER"
+            target="blank" rel="noreferrer noopener"
+            className="button">
+            <img src={YouTube} alt="YouTube" className="external-link" />
+            디지털아트페스티벌 유튜브
           </Link>
 
           <Link to="https://instagram.com/digitalartsfestival_sia"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={logo} alt="Instagram" className="external-link" />
+            <img src={Instagram} alt="Instagram" className="external-link" />
             디지털아트페스티벌 인스타그램
           </Link>
 
           <Link to="https://instagram.com/sia_digitalart"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={logo} alt="Instagram" className="external-link" />
+            <img src={Instagram} alt="Instagram" className="external-link" />
             디지털아트전공 인스타그램
           </Link>
         </div>

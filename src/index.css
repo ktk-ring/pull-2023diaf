@@ -5,7 +5,9 @@ body {
   font-size: 18px;
   justify-content: center;
   border-bottom: 2px solid #ccc;
-  background-color: #eee;
+  background-color: #201516;
+  color: #f3f3f3;
+  margin: 0;
 }
 
 .app-container {
@@ -15,16 +17,28 @@ body {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #f3f3f3;
 }
 
+p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 175%;
+}
+
+.banner-image {
+  width: 100%;
+}
+.main {
+  transition: all 0.3s ease;
+  margin-top: 75px;
+}
 .main-content {
   margin: 50px;
-  margin-top: 150px;
-  text-align: justify;
+  text-align: left;
 }
 
-.profile-left {
+.profile-left { 
   text-align: left;
   padding-bottom: 50px;
 }
@@ -48,44 +62,40 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
-  background-color: #fff;
+  height: 75px;
+  background-color: #232323;
   justify-content: center;
   align-items: center;
-  padding: 10px 0 10px 0;
-  border-bottom: 2px solid #ccc;
 }
 
 .category {
   width: 2px;
   height: 25%;
+  margin: 10px;
   background-color: #ccc;
 }
 
 .button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   text-align: center;
-  width: 75px;
-  height: 20px;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 20px;
+  height: 25px;
+  padding: 25px;
   font-weight: 700;
   font-size: 18px;
-  background-color: #fff;
   transition: background-color 0.3s ease;
 }
 
 .button.active {
-  background-color: #ccc;
+  background-color: #ffffff22;
 }
 
 .button:hover {
-  background-color: #eee;
+  background-color: #ffffff44;
 }
 
 .button-image-title {
-  width: 60px;
+  width: 120px;
   padding: 0 20px 0 20px;
 }
 
@@ -100,13 +110,21 @@ a {
   align-items: center;
 }
 
-@media screen and (min-width: 1250px) {
+
+@media screen and (min-width: 1200px) {
   .app-container {
     flex-direction: row;
   }
 
+  .main {
+    width: 100%;
+    max-width: 1300px;
+    margin: 50px 50px 0 400px;
+  }
+
   .menu {
-    width: 350px;
+    left: 0;
+    width: 375px;
     height: 100vh;
     flex-direction: column;
     align-items: flex-start;
@@ -128,16 +146,16 @@ a {
   }
 
   .button {
+    font-size: 20px;
     display: flex;
     align-items: center;
     text-align: left;
-    width: 275px;
-    margin: 2.5px auto 2.5px auto;
+    width: 325px;
   }
 
   .button-image-title {
-    width: 60px;
-    padding: 0 10px 0 10px;
+    width: 300px;
+    padding: 25px;
   }
 
   .button-container {
@@ -148,13 +166,14 @@ a {
     gap: 15px;
   }
 
-  .main-content {
-    width: 100%;
-    max-width: 1300px;
-    margin: 50px 50px 0 400px;
-  }
 }
-@media screen and (max-width: 1050px) {
+
+@media screen and (max-width: 767px) {
+
+  .category {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
 
   .menu-narrow {
     display: flex;
@@ -164,14 +183,17 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    border-radius: 30px;
+    border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
     transition: transform 0.6s ease;
   }
 
   .button {
-    width: 300px;
+    display: inline-block;
+    width: 50%;
+    min-width: 100px;
+    margin: 7.5px 10px;
   }
 
   .button-container {
@@ -187,18 +209,17 @@ a {
   }
 
   .button-container-narrow {
+    top: 0;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     transform: translateY(-1000px);
     transition: transform 0.6s ease;
   }
 
   .button-container-narrow.expanded-buttons {
-    top: 100%;
-    width: 100%;
     transform: translateY(50px);
-    transition: transform 0.6s ease;
   }
 }

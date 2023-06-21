@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
-import MainPage from './components/MainPage';
-import Artists from './components/Artists';
+import MainPage from './components/Statement';
+import Artist from './components/Artist';
 import Artwork000 from './components/Artworks/Artwork000';
 import Artwork001 from './components/Artworks/Artwork001';
 import Artwork002 from './components/Artworks/Artwork002';
@@ -13,8 +13,9 @@ import Buttons from './components/Buttons';
 
 const App = () => {
 
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 1250);
-  const [isNarrowScreen, setIsNarrowScreen] = useState(window.innerWidth <= 1050);
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 1200);
+  const [isNarrowScreen, setIsNarrowScreen] = useState(window.innerWidth < 768);
+
   const [activeButton, setActiveButton] = useState('main');
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -27,9 +28,9 @@ const App = () => {
   // 가변폭
   useEffect(() => {
     const handleResize = () => {
-      setIsWideScreen(window.innerWidth >= 1250);
-      setIsNarrowScreen(window.innerWidth <= 1050);
-      if (window.innerWidth > 1050) {
+      setIsWideScreen(window.innerWidth >= 1200);
+      setIsNarrowScreen(window.innerWidth < 768);
+      if (window.innerWidth > 768) {
         setIsExpanded(false);
       }
     };
@@ -58,44 +59,32 @@ const App = () => {
     <div>
       <div className="app-container">
         <div className="menu">
-          <nav>
-            {isNarrowScreen ?
-              <div className="button-container">
-                <div><div>
-                </div>
-                  <div className="category" />
-                  <Link className={`button ${activeButton === 'expand' ? 'active' : ''}`} onClick={toggleExpand}>
-                    {!isExpanded ? '페이지 메뉴 펼치기' : '페이지 메뉴 접기'}
-                  </Link>
-                  <div className="category" />
-                </div>
-                <div>
-                  <div className={`button-container-narrow ${isExpanded ? 'expanded-buttons' : ''}`}>
-                    <Buttons
-                      activeButton={activeButton}
-                      handleButtonClick={handleButtonClick}
-                      isWideScreen={isWideScreen}
-                      isNarrowScreen={isNarrowScreen}
-                      setIsExpanded={setIsExpanded} />
-                  </div>
-                  {/* )} */}
-                </div>
+          {isNarrowScreen ?
+            <div className="button-container">
+              <Link className={`button ${activeButton === 'expand' ? 'active' : ''}`} onClick={toggleExpand}>
+                {!isExpanded ? '페이지 메뉴 펼치기' : '페이지 메뉴 접기'}
+              </Link>
+              <div className={`button-container-narrow ${isExpanded ? 'expanded-buttons' : ''}`}>
+                <Buttons
+                  activeButton={activeButton}
+                  handleButtonClick={handleButtonClick}
+                  isWideScreen={isWideScreen}
+                  isNarrowScreen={isNarrowScreen}
+                  setIsExpanded={setIsExpanded} />
               </div>
+            </div>
 
-              : (
-                <div className="button-container">
-                  <Buttons
-                    activeButton={activeButton}
-                    handleButtonClick={handleButtonClick}
-                    isWideScreen={isWideScreen} />
-                </div>
-              )}
-          </nav>
+            : (
+              <Buttons
+                activeButton={activeButton}
+                handleButtonClick={handleButtonClick}
+                isWideScreen={isWideScreen} />
+            )}
         </div>
-        <div className="main-content">
+        <div className="main">
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/artists" element={<Artists />} />
+            <Route path="/artist" element={<Artist />} />
             <Route path="/000" element={<Artwork000 />} />
             <Route path="/001" element={<Artwork001 />} />
             <Route path="/002" element={<Artwork002 />} />
