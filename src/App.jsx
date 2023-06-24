@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
-import MainPage from './components/Statement';
+import MainPage from './components/Main';
+import Statement from './components/Statement';
 import Artist from './components/Artist';
 import Artwork000 from './components/Artworks/000.Spring';
 import Artwork001 from './components/Artworks/001.Drawer';
@@ -55,49 +56,47 @@ const App = () => {
   };
 
   return (
-    <div>
-      <div className="app-container">
-        <div className="menu">
-          {isNarrowScreen ?
-            <div className="button-container">
-              <Link className={`button ${activeButton === 'expand' ? 'active' : ''}`} onClick={toggleExpand}>
-                {!isExpanded ? '페이지 메뉴 펼치기' : '페이지 메뉴 접기'}
-              </Link>
-              <div className={`button-container-narrow ${isExpanded ? 'expanded-buttons' : ''}`}>
-                <Buttons
-                  activeButton={activeButton}
-                  handleButtonClick={handleButtonClick}
-                  isWideScreen={isWideScreen}
-                  isNarrowScreen={isNarrowScreen}
-                  setIsExpanded={setIsExpanded} />
-              </div>
-            </div>
+    <div className="app-container">
+      {isNarrowScreen ?
+        <div className="button-container">
+          <Link className={`button ${activeButton === 'expand' ? 'active' : ''}`} onClick={toggleExpand}>
+            {!isExpanded ? '페이지 메뉴 펼치기' : '페이지 메뉴 접기'}
+          </Link>
+          <div className={`button-container-narrow ${isExpanded ? 'expanded-buttons' : ''}`}>
+            <Buttons
+              activeButton={activeButton}
+              handleButtonClick={handleButtonClick}
+              isWideScreen={isWideScreen}
+              isNarrowScreen={isNarrowScreen}
+              setIsExpanded={setIsExpanded} />
+          </div>
+        </div>
 
-            : (
-              <Buttons
-                activeButton={activeButton}
-                handleButtonClick={handleButtonClick}
-                isWideScreen={isWideScreen} />
-            )}
-        </div>
-        <div className="main">
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/artist" element={<Artist />} />
-            <Route path="/000" element={<Artwork000
-              isWideScreen={isWideScreen}
-              isNarrowScreen={isNarrowScreen} />} />
-            <Route path="/001" element={<Artwork001
-              isWideScreen={isWideScreen}
-              isNarrowScreen={isNarrowScreen} />} />
-            <Route path="/002" element={<Artwork002
-              isWideScreen={isWideScreen}
-              isNarrowScreen={isNarrowScreen} />} />
-            <Route path="/004" element={<Artwork004
-              isWideScreen={isWideScreen}
-              isNarrowScreen={isNarrowScreen} />} />
-          </Routes>
-        </div>
+        : (
+          <Buttons
+            activeButton={activeButton}
+            handleButtonClick={handleButtonClick}
+            isWideScreen={isWideScreen} />
+        )}
+      <div className="main">
+        <Routes>
+          <Route path="/" element={<MainPage
+          isWideScreen={isWideScreen} />} />
+          <Route path="/statement" element={<Statement />} />
+          <Route path="/artist" element={<Artist />} />
+          <Route path="/000" element={<Artwork000
+            isWideScreen={isWideScreen}
+            isNarrowScreen={isNarrowScreen} />} />
+          <Route path="/001" element={<Artwork001
+            isWideScreen={isWideScreen}
+            isNarrowScreen={isNarrowScreen} />} />
+          <Route path="/002" element={<Artwork002
+            isWideScreen={isWideScreen}
+            isNarrowScreen={isNarrowScreen} />} />
+          <Route path="/004" element={<Artwork004
+            isWideScreen={isWideScreen}
+            isNarrowScreen={isNarrowScreen} />} />
+        </Routes>
       </div>
     </div>
   );

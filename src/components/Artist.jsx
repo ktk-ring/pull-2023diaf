@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 import logo from '../img/seoularts.png';
 
-import 이세찬 from '../img/이세찬.webp';
-import 양선아 from '../img/양선아.webp';
-import 이은정 from '../img/이은정.webp';
-import 김동호 from '../img/김동호.webp';
-import 김태균 from '../img/김태균.webp';
+import 이세찬 from '../img/이세찬.jpg';
+import 양선아 from '../img/양선아.jpg';
+import 이은정 from '../img/이은정.jpg';
+import 김동호 from '../img/김동호.jpg';
+import 김태균 from '../img/김태균.jpg';
 
 const Artists = () => {
   return (
@@ -49,125 +49,172 @@ const Artists = () => {
         <div className="profile-left">
           <img className="profile-image"
             src={이세찬} alt="이세찬"></img>
-          <h3>팀장 일세찬</h3>
-          <h4>영상학부 디지털아트전공 2023012<br/>
+
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            paddingLeft: '50px'
+          }}>
+            <h3>팀장 일세찬</h3>
+            <h4>영상학부 디지털아트전공 2023012<br />
               기획, 아트, 테크 등 총괄</h4>
-          <p><strong>작가의 말: </strong>여전히 고민중입니다.</p>
-          
-          <div style={{display: 'flex'}}>
-          <Link to="https://instagram.com/1il.sechan"
-            target="blank" rel="noreferrer noopener"
-            className="button"
-            style={{marginLeft: 10, margin: 10, width: 135}}>
-            <img src={logo} alt="Instagram" className="external-link" />
-            인스타그램
-          </Link><Link to="https://instagram.com/1il.sechan"
-            target="blank" rel="noreferrer noopener"
-            className="button"
-            style={{margin: 10, width: 100}}>
-            <img src={logo} alt="Instagram" className="external-link" />
-            유튜브
-          </Link>
+            <p><strong>작가의 말: </strong><br />
+              여전히 고민중입니다.</p>
+
+            <div style={{ display: 'flex' }}>
+              <Link to="https://instagram.com/1il.sechan"
+                target="blank" rel="noreferrer noopener"
+                className="button"
+                style={{ width: 135 }}>
+                <img src={logo} alt="Instagram" className="external-link" />
+                인스타그램
+              </Link>
+              <Link to="https://instagram.com/1il.sechan"
+                target="blank" rel="noreferrer noopener"
+                className="button"
+                style={{ width: 100 }}>
+                <img src={logo} alt="Instagram" className="external-link" />
+                유튜브
+              </Link>
+            </div>
           </div>
         </div>
 
         <div className="profile-right">
+
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            paddingRight: '50px'
+          }}>
+            <h3>팀원 양선아</h3>
+            <h4>영상학부 디지털아트전공 2023011<br />
+              아트 및 테크 담당</h4>
+            <p><strong>작가의 말: </strong><br />
+              무사히 졸업할 수 있게 해주세요</p>
+
+            <div>
+              <Link to="https://instagram.com/1il.sechan"
+                target="blank" rel="noreferrer noopener"
+                className="button"
+                style={{ justifyContent: 'right' }}>
+                <img src={logo} alt="Instagram" className="external-link" />
+                인스타그램
+              </Link>
+              <Link to="https://instagram.com/1il.sechan"
+                target="blank" rel="noreferrer noopener"
+                className="button"
+                style={{ justifyContent: 'right' }}>
+                <img src={logo} alt="Instagram" className="external-link" />
+                유튜브
+              </Link>
+            </div>
+
+          </div>
           <img className="profile-image"
             src={양선아} alt="양선아"></img>
-          <h3>팀원 양선아</h3>
-          <h4>영상학부 디지털아트전공 2023011<br/>
-              아트 및 테크 담당</h4>
-          <p><strong>작가의 말: </strong>무사히 졸업할 수 있게 해주세요</p>
-
-          <div style={{display: 'flex'}}>
-          <Link to="https://instagram.com/1il.sechan"
-            target="blank" rel="noreferrer noopener"
-            className="button"
-            style={{margin: 10, width: 135}}>
-            <img src={logo} alt="Instagram" className="external-link" />
-            인스타그램
-          </Link><Link to="https://instagram.com/1il.sechan"
-            target="blank" rel="noreferrer noopener"
-            className="button"
-            style={{marginRight: 0, margin: 10, width: 100}}>
-            <img src={logo} alt="Instagram" className="external-link" />
-            유튜브
-          </Link>
-          </div>
         </div>
 
         <div className="profile-left">
           <img className="profile-image"
             src={이은정} alt="이은정"></img>
-          <h3>팀원 이은정</h3>
-          <h4>영상학부 디지털아트전공 2123041<br/>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            paddingLeft: '50px'
+          }}>
+            <h3>팀원 이은정</h3>
+            <h4>영상학부 디지털아트전공 2123041<br />
               아트 및 테크 담당</h4>
-          <p><strong>작가의 말: </strong>희망을 찾아온 공간에서 절망을 만났습니다.</p>
+            <p><strong>작가의 말: </strong><br />
+              희망을 찾아온 공간에서 절망을 만났습니다.</p>
 
-          <div style={{display: 'flex'}}>
-          <Link to="https://instagram.com/1il.sechan"
-            target="blank" rel="noreferrer noopener"
-            className="button"
-            style={{marginLeft: 0, margin: 10, width: 135}}>
-            <img src={logo} alt="Instagram" className="external-link" />
-            인스타그램
-          </Link><Link to="https://instagram.com/1il.sechan"
-            target="blank" rel="noreferrer noopener"
-            className="button"
-            style={{margin: 10, width: 100}}>
-            <img src={logo} alt="Instagram" className="external-link" />
-            유튜브
-          </Link>
+            <div style={{ display: 'flex' }}>
+              <Link to="https://instagram.com/1il.sechan"
+                target="blank" rel="noreferrer noopener"
+                className="button"
+                style={{ width: 135 }}>
+                <img src={logo} alt="Instagram" className="external-link" />
+                인스타그램
+              </Link>
+              <Link to="https://instagram.com/1il.sechan"
+                target="blank" rel="noreferrer noopener"
+                className="button"
+                style={{ width: 100 }}>
+                <img src={logo} alt="Instagram" className="external-link" />
+                유튜브
+              </Link>
+            </div>
           </div>
         </div>
 
         <div className="profile-right">
+
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            paddingRight: '50px'
+          }}>
+            <h3>팀원 김동호</h3>
+            <h4>영상학부 디지털아트전공 2223014<br />
+              기획 및 아트 담당</h4>
+            <p><strong>작가의 말: </strong><br />
+              -</p>
+
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <Link to="https://instagram.com/sa_gum"
+                target="blank" rel="noreferrer noopener"
+                className="button"
+                style={{ width: 135 }}>
+                <img src={logo} alt="Instagram" className="external-link" />
+                인스타그램
+              </Link>
+              <Link to="https://instagram.com/1il.sechan"
+                target="blank" rel="noreferrer noopener"
+                className="button"
+                style={{ width: 100 }}>
+                <img src={logo} alt="Instagram" className="external-link" />
+                유튜브
+              </Link>
+            </div>
+
+          </div>
           <img className="profile-image"
             src={김동호} alt="김동호"></img>
-          <h3>팀원 김동호</h3>
-          <h4>영상학부 디지털아트전공 2223014<br/>
-              기획 및 아트 담당</h4>
-          <p><strong>작가의 말: </strong>-</p>
-
-          <div style={{display: 'flex'}}>
-          <Link to="https://instagram.com/1il.sechan"
-            target="blank" rel="noreferrer noopener"
-            className="button"
-            style={{margin: 10, width: 135}}>
-            <img src={logo} alt="Instagram" className="external-link" />
-            인스타그램
-          </Link><Link to="https://instagram.com/1il.sechan"
-            target="blank" rel="noreferrer noopener"
-            className="button"
-            style={{marginRight: 0, margin: 10, width: 100}}>
-            <img src={logo} alt="Instagram" className="external-link" />
-            유튜브
-          </Link>
-          </div>
         </div>
 
         <div className="profile-left">
           <img className="profile-image"
             src={김태균} alt="김태균"></img>
-          <h3>팀원 김태균</h3>
-          <h4>영상학부 디지털아트전공 2223007<br/>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            paddingLeft: '50px'
+          }}>
+            <h3>팀원 김태균</h3>
+            <h4>영상학부 디지털아트전공 2223007<br />
               테크 담당</h4>
-          <p><strong>작가의 말: </strong>학교에 들어온 이후 처음 경험하는 제작 전시입니다. 처음이어도 잘하고 싶었습니다. 팀원들과 참 많이 고민했고, 열심히 했습니다.</p>
+            <p><strong>작가의 말: </strong><br />
+              학교에 들어온 이후 처음 경험하는 제작 전시입니다. <br />
+              처음이어도 잘하고 싶었습니다. <br />
+              팀원들과 참 많이 고민했고, 열심히 했습니다.</p>
 
-          <div style={{display: 'flex'}}>
-          <Link to="https://instagram.com/1il.sechan"
-            target="blank" rel="noreferrer noopener"
-            className="button"
-            style={{marginLeft: 0, margin: 10, width: 135}}>
-            <img src={logo} alt="Instagram" className="external-link" />
-            인스타그램
-          </Link><Link to="https://instagram.com/1il.sechan"
-            target="blank" rel="noreferrer noopener"
-            className="button"
-            style={{margin: 10, width: 100}}>
-            <img src={logo} alt="Instagram" className="external-link" />
-            유튜브
-          </Link>
+            <div style={{ display: 'flex' }}>
+              <Link to="https://instagram.com/1il.sechan"
+                target="blank" rel="noreferrer noopener"
+                className="button"
+                style={{ width: 135 }}>
+                <img src={logo} alt="Instagram" className="external-link" />
+                인스타그램
+              </Link>
+              <Link to="https://instagram.com/1il.sechan"
+                target="blank" rel="noreferrer noopener"
+                className="button"
+                style={{ width: 100 }}>
+                <img src={logo} alt="Instagram" className="external-link" />
+                유튜브
+              </Link>
+            </div>
           </div>
         </div>
       </div>

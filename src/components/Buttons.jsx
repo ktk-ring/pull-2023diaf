@@ -20,7 +20,6 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           </Link>
         </div>)}
 
-      <div className="divide" />
       <div className="category">{isWideScreen ? '전시 개요' : ''}</div>
 
       <Link to="/"
@@ -29,7 +28,16 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           handleButtonClick('main')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '<당기시오> 작가 노트' : '작가 노트'}
+        {isWideScreen || isNarrowScreen ? '디지털아트페스티벌: 멀티페어링 소개' : '전시'}
+      </Link>
+
+      <Link to="/statement"
+        className={`button ${activeButton === 'statement' ? 'active' : ''}`}
+        onClick={() => {
+          handleButtonClick('statement')
+          isNarrowScreen && setIsExpanded(false)
+        }}>
+        {isWideScreen || isNarrowScreen ? '작품 <당기시오> 작가 노트' : '작품'}
       </Link>
 
       <Link to="/artist"
@@ -38,10 +46,9 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           handleButtonClick('artist')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '고민중 팀 및 작가 소개' : '작가 소개'}
+        {isWideScreen || isNarrowScreen ? '팀 고민중 및 작가 소개' : '작가'}
       </Link>
-      
-      <div className="divide" />
+
       <div className="category">{isWideScreen ? '작품 상세' : ''}</div>
 
       <Link to="/001"
@@ -83,34 +90,37 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
 
       {isWideScreen && (
         <div style={{ width: '100%' }}>
-          <div className="divide" />
           <div className="category">관련 웹사이트</div>
 
           <Link to="https://www.youtube.com/@DIAF_ENTER"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={DIAF2023} alt="DIAF" className="external-link" style={{ borderRadius: '25%' }} />
+            <img src={DIAF2023} alt="DIAF" className="external-link"
+              style={{ borderRadius: '25%', marginLeft: 0 }} />
             디지털아트페스티벌 웹사이트
           </Link>
 
           <Link to="https://www.youtube.com/@DIAF_MULTI-PAIRING"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={YouTube} alt="YouTube" className="external-link" />
+            <img src={YouTube} alt="YouTube" className="external-link"
+              style={{ borderRadius: '25%', marginLeft: 0 }} />
             디지털아트페스티벌 유튜브
           </Link>
 
           <Link to="https://instagram.com/digitalartsfestival_sia"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={Instagram} alt="Instagram" className="external-link" />
+            <img src={Instagram} alt="Instagram" className="external-link"
+              style={{ borderRadius: '25%', marginLeft: 0 }} />
             디지털아트페스티벌 인스타그램
           </Link>
 
           <Link to="https://instagram.com/sia_digitalart"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={Instagram} alt="Instagram" className="external-link" />
+            <img src={Instagram} alt="Instagram" className="external-link"
+              style={{ borderRadius: '25%', marginLeft: 0 }} />
             디지털아트 전공 학회 인스타그램
           </Link>
         </div>
