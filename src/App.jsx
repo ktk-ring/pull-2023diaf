@@ -3,17 +3,16 @@ import { Routes, Route, Link } from 'react-router-dom';
 
 import MainPage from './components/Statement';
 import Artist from './components/Artist';
-import Artwork000 from './components/Artworks/Artwork000';
-import Artwork001 from './components/Artworks/Artwork001';
-import Artwork002 from './components/Artworks/Artwork002';
-import Artwork003 from './components/Artworks/Artwork003';
-import Artwork004 from './components/Artworks/Artwork004';
+import Artwork000 from './components/Artworks/000.Spring';
+import Artwork001 from './components/Artworks/001.Drawer';
+import Artwork002 from './components/Artworks/002.Door';
+import Artwork004 from './components/Artworks/004.USB';
 
 import Buttons from './components/Buttons';
 
 const App = () => {
 
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 1200);
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 1200);
   const [isNarrowScreen, setIsNarrowScreen] = useState(window.innerWidth < 768);
 
   const [activeButton, setActiveButton] = useState('main');
@@ -28,7 +27,7 @@ const App = () => {
   // 가변폭
   useEffect(() => {
     const handleResize = () => {
-      setIsWideScreen(window.innerWidth >= 1200);
+      setIsWideScreen(window.innerWidth > 1200);
       setIsNarrowScreen(window.innerWidth < 768);
       if (window.innerWidth > 768) {
         setIsExpanded(false);
@@ -85,11 +84,18 @@ const App = () => {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/artist" element={<Artist />} />
-            <Route path="/000" element={<Artwork000 />} />
-            <Route path="/001" element={<Artwork001 />} />
-            <Route path="/002" element={<Artwork002 />} />
-            <Route path="/003" element={<Artwork003 />} />
-            <Route path="/004" element={<Artwork004 />} />
+            <Route path="/000" element={<Artwork000
+              isWideScreen={isWideScreen}
+              isNarrowScreen={isNarrowScreen} />} />
+            <Route path="/001" element={<Artwork001
+              isWideScreen={isWideScreen}
+              isNarrowScreen={isNarrowScreen} />} />
+            <Route path="/002" element={<Artwork002
+              isWideScreen={isWideScreen}
+              isNarrowScreen={isNarrowScreen} />} />
+            <Route path="/004" element={<Artwork004
+              isWideScreen={isWideScreen}
+              isNarrowScreen={isNarrowScreen} />} />
           </Routes>
         </div>
       </div>

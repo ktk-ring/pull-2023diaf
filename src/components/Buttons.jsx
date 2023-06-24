@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import seoularts from '../img/seoularts.png';
 import pull from '../img/Logo_F3F3F3.png';
 import DIAF2023 from '../img/DIAF2023_Profile.webp';
 import Instagram from '../img/Instagram.png';
@@ -21,7 +20,9 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           </Link>
         </div>)}
 
+      <div className="divide" />
       <div className="category">{isWideScreen ? '전시 개요' : ''}</div>
+
       <Link to="/"
         className={`button ${activeButton === 'main' ? 'active' : ''}`}
         onClick={() => {
@@ -37,18 +38,11 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           handleButtonClick('artist')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '고민중 팀 및 작가 소개' : '팀 및 작가 소개'}
+        {isWideScreen || isNarrowScreen ? '고민중 팀 및 작가 소개' : '작가 소개'}
       </Link>
-
+      
+      <div className="divide" />
       <div className="category">{isWideScreen ? '작품 상세' : ''}</div>
-      <Link to="/000"
-        className={`button ${activeButton === '000' ? 'active' : ''}`}
-        onClick={() => {
-          handleButtonClick('000')
-          isNarrowScreen && setIsExpanded(false)
-        }}>
-        {isWideScreen || isNarrowScreen ? '#000: 봄 맞이하기' : '봄 맞이하기'}
-      </Link>
 
       <Link to="/001"
         className={`button ${activeButton === '001' ? 'active' : ''}`}
@@ -56,7 +50,7 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           handleButtonClick('001')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '#001: 서랍 당겨보기' : '서랍 당겨보기'}
+        {isWideScreen || isNarrowScreen ? '01. 서랍 당겨보기' : '서랍'}
       </Link>
 
       <Link to="/002"
@@ -65,16 +59,16 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           handleButtonClick('002')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '#002: 문 열어보기' : '문 열어보기'}
+        {isWideScreen || isNarrowScreen ? '02. 문 열어보기' : '문'}
       </Link>
 
-      <Link to="/003"
-        className={`button ${activeButton === '003' ? 'active' : ''}`}
+      <Link to="/000"
+        className={`button ${activeButton === '000' ? 'active' : ''}`}
         onClick={() => {
-          handleButtonClick('003')
+          handleButtonClick('000')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '#003: ??? 당겨보기' : '???'}
+        {isWideScreen || isNarrowScreen ? '03. 봄 맞이하기' : '봄'}
       </Link>
 
       <Link to="/004"
@@ -83,29 +77,23 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
           handleButtonClick('004')
           isNarrowScreen && setIsExpanded(false)
         }}>
-        {isWideScreen || isNarrowScreen ? '#004: 고민 담아가기' : '고민 담아가기'}
+        {isWideScreen || isNarrowScreen ? '04. 고민 담아가기' : '고민'}
       </Link>
 
 
       {isWideScreen && (
         <div style={{ width: '100%' }}>
-          <div className="divide" style={{ marginTop: 25, marginBottom: 25 }} />
-          <div className="category">외부 링크</div>
-          <Link to="https://instagram.com/1il.sechan"
-            target="blank" rel="noreferrer noopener"
-            className="button">
-            <img src={Instagram} alt="Instagram" className="external-link" />
-            고민중 인스타그램 @1il.sechan
-          </Link>
+          <div className="divide" />
+          <div className="category">관련 웹사이트</div>
 
           <Link to="https://www.youtube.com/@DIAF_ENTER"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={DIAF2023} alt="DIAF" className="external-link" style={{ borderRadius: '25%' }}/>
+            <img src={DIAF2023} alt="DIAF" className="external-link" style={{ borderRadius: '25%' }} />
             디지털아트페스티벌 웹사이트
           </Link>
 
-          <Link to="https://www.youtube.com/@DIAF_ENTER"
+          <Link to="https://www.youtube.com/@DIAF_MULTI-PAIRING"
             target="blank" rel="noreferrer noopener"
             className="button">
             <img src={YouTube} alt="YouTube" className="external-link" />
@@ -123,7 +111,7 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
             target="blank" rel="noreferrer noopener"
             className="button">
             <img src={Instagram} alt="Instagram" className="external-link" />
-            디지털아트전공 인스타그램
+            디지털아트 전공 학회 인스타그램
           </Link>
         </div>
       )}
