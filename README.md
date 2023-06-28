@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# 고민중 - 당기시오
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 웹사이트 바로가기
 
-## Available Scripts
+[<img src="/src/img/Logo_shadow.png" width="50%"/>](https://ktk-ring.github.io/considering-2023diaf-web)
+- 하단에 기술된 부분을 포함한 상세 정보는 모두 아카이빙 웹사이트에 기재되어 있습니다.
+<br />
 
-In the project directory, you can run:
+## 소개
 
-### `npm start`
+### 개요
+2023년 서울예술대학교 영상학부 디지털아트전공의 캡스톤디자인 졸업전시 '디지털아트페스티벌: 멀티페어링'에 전시될 팀 고민중의 <당기시오> 아카이빙입니다.
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 팀원
+- ##### 2023012 이세찬
+  - 기획, 아트, 테크 등 총괄, 팀장
+- ##### 2023011 양선아
+  - 아트 및 테크 담당
+- ##### 2123041 이은정
+  - 아트 및 테크 담당
+- ##### 2223014 김동호
+  - 기획 및 아트 담당
+- ##### 2223007 김태균
+  - 테크 담당
+<br />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 작가노트
+### 고민중의 ‘당기시오’는-
 
-### `npm test`
+팀 고민중은 전시 &lt;당기시오&gt;를 통해 각 작가가 소망했던 무언가를 ‘당겨오는’ 경험을 공유한다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+무언가를 당긴다는 것은 우리에게 있어 가장 일상적인 행위이나 동시에 가장 와닿지 않는 힘이기도 하다. 
 
-### `npm run build`
+단적인 예시로 편의점에 들어갈 때가 있다. ‘당기시오’라는 글자를 제대로 읽지 않아서 문을 밀어버리고, 도어스톱에 가로막힌 유리벽이 나에게 충격을 주는 경우가 이것이다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+돌이켜보면 당긴다는 행위는 이미 주변에 만연하다. 은행 창구의 번호표를 뽑는 것이나, 오래된 서랍을 열어보는 것, 줄자를 꺼내 측량하거나 심지어는 문을 여는 행위까지. 사람들은 언제나 무언가를 당기고 있다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+그렇다면 ‘왜 당길까’?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+나는 무언가를 원할 때 당긴다. 
+휴면계좌에 담긴 몇만 원을 인출하기 위하여, 서랍 속의 볼펜을 꺼내어 쓰기 위하여, 작품 전시를 위한 실측에 나서거나 그저 집 밖을 잠시 나가고 싶을 때 당긴다. 
+그리하여 원하는 것을 얻기 위해 당기는 것이다.
 
-### `npm run eject`
+작품을 설계하며 가장 길게 고민했던 지점은 ‘무엇을 욕망하는가’에 가깝다. 
+사람이 무언가를 원할 때 당긴다면, 내가 가지지 못했던ー그러나 아주 간절히 욕망했던-무언가를 당겨볼 수 있는 작품을 만들어보고 싶었다. 
+그러니까, 아무리 당겨보려 해도 좀처럼 다가오질 않는 것들을 말이다.
+<br />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 작품 소개
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. 서랍 당겨보기
+어릴 적의 나에게 가장 큰 영감이 되던 것은 거실 책상 위 스피커에서 흘러나오던 어머니의 블로그 배경음악이었다. 
+패닉의 1998년작 <내 낡은 서랍 속의 바다>를 좋아하셨다. 
+이제 막 산수를 배우는 나이부터 이 노래의 가사를 외워 부르곤 했다. 
+<서랍 당겨보기>는 패닉의 노랫말에서 영감을 받은 작업물이다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+어린 시절부터 간직한 당신의 낡은 서랍 속에는 순수했던 자신만의 바다가 있을 것이다. 그 때에는 참 꿈이 많았고, 내일을 걱정하지 않았다. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+서랍 속에 무엇이 있을지는 모르겠다. 
+나의 책상을 당기면 오래된 지우개와 공책 몇 권, 연필 같은 것이 바다처럼 밀려온다. 
+당신의 낡은 서랍 속에는 어떤 바다가, 어떤 숲이 있을까. 그러니까 어떤 그리움과 추억이 있을까.
 
-## Learn More
+<서랍 당겨보기>는 낡은 서랍 속 바다를 가진 당신을 위한 작업물이다.
+<br />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. 문 열어보기
+문 밖에는 우리가 두려워하는 것들이 있다. 
+나의 경우에는, 문 바깥으로 나서는 순간부터 나를 잃어가는 느낌이 두렵다. 무의미한 시선, 빽빽한 도시의 풍경, 지하철과 선로가 맞물리는 소리나 지나가는 사람들의 웅성임…. 
+그래서 나는 나의 방으로 도망친다. 
+방문을 꼭 닫아놓고 농성한다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<문 열어보기>는 문 밖의 세상이 두려운 아무개를 위한 작업물이다. 
+그저 걷다가 바라본 하늘을 떠올리며 세상 밖을 마주해보는 것이다. 여전히 어렵지만 스스로 문을 열고 나가본다. 멀리 가두어 둔 문 밖의 것들과 당당히 마주해 보고자 한다.
+<br />
 
-### Code Splitting
+### 3. 봄 맞이하기
+어릴 적의 나에게 가장 큰 영감이 되던 것은 거실 책상 위 스피커에서 흘러나오던 어머니의 블로그 배경음악이었다. 
+패닉의 1998년작 <내 낡은 서랍 속의 바다>를 좋아하셨다. 
+이제 막 산수를 배우는 나이부터 이 노래의 가사를 외워 부르곤 했다. 
+<서랍 당겨보기>는 패닉의 노랫말에서 영감을 받은 작업물이다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+어린 시절부터 간직한 당신의 낡은 서랍 속에는 순수했던 자신만의 바다가 있을 것이다. 그 때에는 참 꿈이 많았고, 내일을 걱정하지 않았다. 
 
-### Analyzing the Bundle Size
+서랍 속에 무엇이 있을지는 모르겠다. 
+나의 책상을 당기면 오래된 지우개와 공책 몇 권, 연필 같은 것이 바다처럼 밀려온다. 
+당신의 낡은 서랍 속에는 어떤 바다가, 어떤 숲이 있을까. 그러니까 어떤 그리움과 추억이 있을까.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<서랍 당겨보기>는 낡은 서랍 속 바다를 가진 당신을 위한 작업물이다.
+<br />
 
-### Making a Progressive Web App
+### 4. 고민 담아가기
+모든 사람들은 각자 다른 세상을 산다. 그럼에도 우리는 기억을 공유하며 공감대를 형성하고, 유사한 경험을 바탕으로 유대를 쌓는다. 
+경험하지 못한 시간을 온전히 전달하는 방법으로 데이터를 꼽았다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+USB 메모리는ー 이동식 저장장치이다. 기억을, 즉 시간을 저장한다. 데이터 조각을 담아서 다른 이에게 온전히 전달한다. 
+관객은 허브에서 USB를 당겨 뽑음으로써 ‘고민중’의 시간을 전해받는다. 그리고 언젠가는 이 장치에 관객만의 기억을, 시간을 담을 것이다.
