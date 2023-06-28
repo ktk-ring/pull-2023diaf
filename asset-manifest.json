@@ -1,29 +1,32 @@
 {
   "files": {
-    "main.css": "/considering-2023diaf-web/static/css/main.7048cdd0.css",
-    "main.js": "/considering-2023diaf-web/static/js/main.3aa4b14b.js",
+    "main.css": "/considering-2023diaf-web/static/css/main.356216c9.css",
+    "main.js": "/considering-2023diaf-web/static/js/main.ac9e9f58.js",
     "static/js/787.fb798993.chunk.js": "/considering-2023diaf-web/static/js/787.fb798993.chunk.js",
-    "static/media/banner_002.png": "/considering-2023diaf-web/static/media/banner_002.d68e2174b3fbf2f1e8d7.png",
-    "static/media/PULL_poster.jpg": "/considering-2023diaf-web/static/media/PULL_poster.009494bd2fef926ad438.jpg",
+    "static/media/PULL_poster.jpg": "/considering-2023diaf-web/static/media/PULL_poster.f50f28ca970178aac785.jpg",
+    "static/media/banner_002.jpg": "/considering-2023diaf-web/static/media/banner_002.31f12b4bf25e31eba0bb.jpg",
+    "static/media/banner_004.jpg": "/considering-2023diaf-web/static/media/banner_004.83a27cc58d09f5f71857.jpg",
     "static/media/Instagram.png": "/considering-2023diaf-web/static/media/Instagram.b50ea4da5dfb577bdfe6.png",
     "static/media/이은정.jpg": "/considering-2023diaf-web/static/media/이은정.3d60137e1d474df36420.jpg",
+    "static/media/banner_000.jpg": "/considering-2023diaf-web/static/media/banner_000.810c7590f87dc5f14611.jpg",
     "static/media/banner_001.jpg": "/considering-2023diaf-web/static/media/banner_001.69188be1287423f4e194.jpg",
     "static/media/이세찬.jpg": "/considering-2023diaf-web/static/media/이세찬.6fba69000d99021d9981.jpg",
     "static/media/양선아.jpg": "/considering-2023diaf-web/static/media/양선아.a19d9a16ca24bd8d5960.jpg",
-    "static/media/MULTI-PAIRING_poster.jpg": "/considering-2023diaf-web/static/media/MULTI-PAIRING_poster.e2638c094f554c792ebf.jpg",
+    "static/media/DIAF_poster.jpg": "/considering-2023diaf-web/static/media/DIAF_poster.e2638c094f554c792ebf.jpg",
     "static/media/김태균.jpg": "/considering-2023diaf-web/static/media/김태균.9a06b5f669809cefa9fd.jpg",
     "static/media/김동호.jpg": "/considering-2023diaf-web/static/media/김동호.9c468112c2fbe6f6adc3.jpg",
     "static/media/seoularts.png": "/considering-2023diaf-web/static/media/seoularts.b3a904c33c6b4c50dc69.png",
-    "static/media/banner_000.png": "/considering-2023diaf-web/static/media/banner_000.b5cafa56d49fde9c2dbb.png",
     "static/media/Logo_F3F3F3.png": "/considering-2023diaf-web/static/media/Logo_F3F3F3.bd1cccc38e0779fd5b52.png",
     "static/media/DIAF2023_Profile.webp": "/considering-2023diaf-web/static/media/DIAF2023_Profile.b9c77cd62ee3e0a9ee74.webp",
     "index.html": "/considering-2023diaf-web/index.html",
-    "main.7048cdd0.css.map": "/considering-2023diaf-web/static/css/main.7048cdd0.css.map",
-    "main.3aa4b14b.js.map": "/considering-2023diaf-web/static/js/main.3aa4b14b.js.map",
+    "static/media/favicon_dark.svg": "/considering-2023diaf-web/static/media/favicon_dark.f743c3e3b3f0b34a81b05ed01d91605e.svg",
+    "static/media/favicon_light.svg": "/considering-2023diaf-web/static/media/favicon_light.2e23ea8c23fc023d494febb6f53e371d.svg",
+    "main.356216c9.css.map": "/considering-2023diaf-web/static/css/main.356216c9.css.map",
+    "main.ac9e9f58.js.map": "/considering-2023diaf-web/static/js/main.ac9e9f58.js.map",
     "787.fb798993.chunk.js.map": "/considering-2023diaf-web/static/js/787.fb798993.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7048cdd0.css",
-    "static/js/main.3aa4b14b.js"
+    "static/css/main.356216c9.css",
+    "static/js/main.ac9e9f58.js"
   ]
 }
