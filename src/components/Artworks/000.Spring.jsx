@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-import Banner from '../../img/banner_000.png';
+import Banner from '../../img/banner_000.jpg';
 
 
-const Artwork000 = ({ isWideScreen, isNarrowScreen }) => {
+const Artwork000 = ({ isWideScreen }) => {
   const bannerRef = useRef(null);
   const [bannerWidth, setBannerWidth] = useState((isWideScreen ? window.innerWidth - 375 : window.innerWidth));
   const [bannerHeight, setBannerHeight] = useState(0);
@@ -50,9 +50,8 @@ const Artwork000 = ({ isWideScreen, isNarrowScreen }) => {
   }, [isWideScreen]);
 
   return (
-    <div title="03. 봄 맞이하기" description="봄 맞이하기에 관한 설명">
-      <div
-        className="banner"
+    <div>
+      <div className="banner"
         ref={bannerRef}
         style={{
           backgroundImage: `url(${Banner})`,
@@ -63,8 +62,7 @@ const Artwork000 = ({ isWideScreen, isNarrowScreen }) => {
           backgroundPosition: `${isWideScreen ? '375px' : 0} ${isWideScreen ? 0 : '75px'}`,
           position: 'relative'
         }}>
-        <div
-          className="banner-overlay"
+        <div className="banner-overlay"
           style={{
             width: '100%',
             height: '100%',
@@ -76,18 +74,22 @@ const Artwork000 = ({ isWideScreen, isNarrowScreen }) => {
             width: 'calc(100% - 100px)',
             left: '0',
             bottom: '0',
-            padding: '400px 50px 25px 50px',
+            padding: '400px 50px 0 50px',
             backgroundImage: `linear-gradient(transparent, rgba(0, 0, 0, 1))`,
             textShadow: '0 0 15px rgba(0, 0, 0, 0.5)',
           }}>
           <h1>03. 봄 맞이하기</h1>
-          <p>
-            <strong>&lt;봄 맞이하기&gt;</strong>는 스크린과 빔 프로젝터, 센서와 밧줄로 구성한다. <br />
-            밧줄을 당기는 관객의 힘에 따라 스크린에 투사되는 공간의 계절과 기후, 시간대 등이 변한다. <br />
-            관객은 밧줄을 강하게 당기다가 놓아볼 수도, 힘을 주거나 풀면서 이를 반복해볼 수도 있다.</p>
+          <p>스크린과 빔 프로젝터, 센서와 밧줄로 구성한 작업</p>
+
         </div>
       </div>
       <div className="main-content">
+        <h2>작품 설명</h2>
+        <p>
+          <strong>&lt;봄 맞이하기&gt;</strong>는 스크린과 빔 프로젝터, 센서와 밧줄로 구성한다. <br />
+          밧줄을 당기는 관객의 힘에 따라 스크린에 투사되는 공간의 계절과 기후, 시간대 등이 변한다. <br />
+          관객은 밧줄을 강하게 당기다가 놓아볼 수도, 힘을 주거나 풀면서 이를 반복해볼 수도 있다.
+        </p>
         <h2>작품 작가노트</h2>
         <p>
           가끔 시간이 빠르게 흐른다는 것을 깨닫는다. <br />
@@ -107,7 +109,7 @@ const Artwork000 = ({ isWideScreen, isNarrowScreen }) => {
         </p>
         <div className="divide" />
         <h2>작품 이미지</h2>
-        <img src={Banner} style={{width: '50vw'}}></img>
+        <img src={Banner} alt='작품 이미지 01' style={{width: '50vw'}}></img>
         <p>
         </p>
       </div>

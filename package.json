@@ -1,9 +1,8 @@
 {
   "name": "considering-2023diaf-web",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "private": true,
   "homepage": "https://ktk-ring.github.io/considering-2023diaf-web",
-
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -11,17 +10,17 @@
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.12.0",
+    "react-router-dom": "^6.14.0",
     "react-youtube": "^10.1.0",
     "web-vitals": "^2.1.4"
   },
-  "devDependencies":{ 
-    "react-scripts": "5.0.1",
-    "react-error-overlay": "6.0.9"
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "react-error-overlay": "6.0.9",
+    "react-scripts": "5.0.1"
   },
-
   "scripts": {
-    "preinstall": "npx npm-force-resolutions", 
+    "preinstall": "npx npm-force-resolutions",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,7 +46,7 @@
       "last 1 safari version"
     ]
   },
-  "resolutions": { 
-    "react-error-overlay": "6.0.9" 
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
   }
 }

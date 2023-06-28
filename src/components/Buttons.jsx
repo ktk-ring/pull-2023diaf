@@ -11,14 +11,12 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
   return (
     <div className={`${!isNarrowScreen ? 'menu' : 'menu-narrow'}`}>
       {!isNarrowScreen && (
-        <div>
-          <Link to="/"
-            className="title"
-            style={{ alignItems: "center" }}
-            onClick={() => handleButtonClick('main')}>
-            <img src={pull} alt="Logo" className="button-image-title" />
-          </Link>
-        </div>)}
+        <Link to="/"
+          className="title"
+          style={{ alignItems: "center" }}
+          onClick={() => handleButtonClick('main')}>
+          <img src={pull} alt="Logo" className="button-title" />
+        </Link>)}
 
       <div className="category">{isWideScreen ? '전시 개요' : ''}</div>
 
@@ -96,31 +94,28 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
             target="blank" rel="noreferrer noopener"
             className="button">
             <img src={DIAF2023} alt="DIAF" className="external-link"
-              style={{ borderRadius: '25%', marginLeft: 0 }} />
+              style={{ borderRadius: '25%' }} />
             디지털아트페스티벌 웹사이트
           </Link>
 
           <Link to="https://www.youtube.com/@DIAF_MULTI-PAIRING"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={YouTube} alt="YouTube" className="external-link"
-              style={{ borderRadius: '25%', marginLeft: 0 }} />
+            <img src={YouTube} alt="YouTube" className="external-link" />
             디지털아트페스티벌 유튜브
           </Link>
 
           <Link to="https://instagram.com/digitalartsfestival_sia"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={Instagram} alt="Instagram" className="external-link"
-              style={{ borderRadius: '25%', marginLeft: 0 }} />
+            <img src={Instagram} alt="Instagram" className="external-link" />
             디지털아트페스티벌 인스타그램
           </Link>
 
           <Link to="https://instagram.com/sia_digitalart"
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={Instagram} alt="Instagram" className="external-link"
-              style={{ borderRadius: '25%', marginLeft: 0 }} />
+            <img src={Instagram} alt="Instagram" className="external-link" />
             디지털아트 전공 학회 인스타그램
           </Link>
         </div>

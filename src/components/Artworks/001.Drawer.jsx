@@ -4,7 +4,7 @@ import YouTube from 'react-youtube';
 import Banner from '../../img/banner_001.jpg';
 
 
-const Artwork001 = ({ isWideScreen, isNarrowScreen }) => {
+const Artwork001 = ({ isWideScreen }) => {
   const bannerRef = useRef(null);
   const [bannerWidth, setBannerWidth] = useState((isWideScreen ? window.innerWidth - 375 : window.innerWidth));
   const [bannerHeight, setBannerHeight] = useState(0);
@@ -51,9 +51,8 @@ const Artwork001 = ({ isWideScreen, isNarrowScreen }) => {
   }, [isWideScreen]);
 
   return (
-    <div title="03. 봄 맞이하기" description="봄 맞이하기에 관한 설명">
-      <div
-        className="banner"
+    <div>
+      <div className="banner"
         ref={bannerRef}
         style={{
           backgroundImage: `url(${Banner})`,
@@ -64,37 +63,37 @@ const Artwork001 = ({ isWideScreen, isNarrowScreen }) => {
           backgroundPosition: `${isWideScreen ? '375px' : 0} ${isWideScreen ? 0 : '75px'}`,
           position: 'relative'
         }}>
-        <div
-          className="banner-overlay"
+        <div className="banner-overlay"
           style={{
             width: '100%',
             height: '100%',
             backdropFilter: `blur(${blurAmount}px)`,
           }} />
-        <div
+        <div 
           style={{
             position: 'absolute',
             width: 'calc(100% - 100px)',
             left: '0',
             bottom: '0',
-            padding: '400px 50px 25px 50px',
+            padding: '400px 50px 0 50px',
             backgroundImage: `linear-gradient(transparent, rgba(0, 0, 0, 1))`,
             textShadow: '0 0 15px rgba(0, 0, 0, 0.5)',
           }}>
-          <h1>03. 봄 맞이하기</h1>
-          <p>
-            <strong>&lt;봄 맞이하기&gt;</strong>는 스크린과 빔 프로젝터, 센서와 밧줄로 구성한다. <br />
-            밧줄을 당기는 관객의 힘에 따라 스크린에 투사되는 공간의 계절과 기후, 시간대 등이 변한다. <br />
-            관객은 밧줄을 강하게 당기다가 놓아볼 수도, 힘을 주거나 풀면서 이를 반복해볼 수도 있다.</p>
+          <h1>01. 서랍 당겨보기</h1>
+          <p>스크린과 빔 프로젝터, 센서와 밧줄로 구성한 작업</p>
+
         </div>
       </div>
       <div className="main-content">
-        <h2>작품 작가노트</h2>
+        <h2>작품 설명</h2>
+        <p>
+          <strong>&lt;서랍 당겨보기&gt;</strong>는 낡은 서랍과 센서, 스피커로 이루어진 작업이다. <br />
+          서랍 안에는 오랜 세월이 지난 듯 먼지 쌓인 물건들이 있다. <br />
+          서랍을 열면, 바다나 숲과 같은 소리가 관객 주위로 들려온다.
+        </p>
 
+        <h2>작품 작가노트</h2>
         <YouTube
-          style={{
-            margin: '25px 0'
-          }}
           videoId='iN9z5sfR6EI'
           opts={{
             width: "540",
@@ -107,7 +106,7 @@ const Artwork001 = ({ isWideScreen, isNarrowScreen }) => {
           }}
           onEnd={(e) => { e.target.stopVideo(0); }}
         />
-        <h4 style={{marginTop: '-25px'}}>패닉, &lt;내 낡은 서랍속의 바다&gt;, 1998</h4>
+        <div className='caption'>패닉, &lt;내 낡은 서랍속의 바다&gt;, 1998</div>
         <p>
           어릴 적의 나에게 가장 큰 영감이 되던 것은 거실 책상 위 스피커에서 흘러나오던 어머니의 블로그 배경음악이었다. <br />
           패닉의 1998년작 &lt;내 낡은 서랍 속의 바다&gt;를 좋아하셨다. <br />

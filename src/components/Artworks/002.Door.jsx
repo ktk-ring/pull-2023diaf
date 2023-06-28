@@ -1,9 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-import Banner from '../../img/banner_002.png';
+import Banner from '../../img/banner_002.jpg';
 
-
-const Artwork002 = ({ isWideScreen, isNarrowScreen }) => {
+const Artwork002 = ({ isWideScreen }) => {
   const bannerRef = useRef(null);
   const [bannerWidth, setBannerWidth] = useState((isWideScreen ? window.innerWidth - 375 : window.innerWidth));
   const [bannerHeight, setBannerHeight] = useState(0);
@@ -50,9 +49,8 @@ const Artwork002 = ({ isWideScreen, isNarrowScreen }) => {
   }, [isWideScreen]);
 
   return (
-    <div title="02. 문 열어보기" description="문 열어보기에 관한 설명">
-      <div
-        className="banner"
+    <div>
+      <div className="banner"
         ref={bannerRef}
         style={{
           backgroundImage: `url(${Banner})`,
@@ -63,8 +61,7 @@ const Artwork002 = ({ isWideScreen, isNarrowScreen }) => {
           backgroundPosition: `${isWideScreen ? '375px' : 0} ${isWideScreen ? 0 : '75px'}`,
           position: 'relative'
         }}>
-        <div
-          className="banner-overlay"
+        <div className="banner-overlay"
           style={{
             width: '100%',
             height: '100%',
@@ -76,39 +73,37 @@ const Artwork002 = ({ isWideScreen, isNarrowScreen }) => {
             width: 'calc(100% - 100px)',
             left: '0',
             bottom: '0',
-            padding: '400px 50px 25px 50px',
+            padding: '400px 50px 0 50px',
             backgroundImage: `linear-gradient(transparent, rgba(0, 0, 0, 1))`,
             textShadow: '0 0 15px rgba(0, 0, 0, 0.5)',
           }}>
           <h1>02. 문 열어보기</h1>
-          <p>
-            <strong>&lt;문 열어보기&gt;</strong>는 가벽, 문과 센서, 빔 프로젝터로 구성한 작업이다. <br />
-            문을 열면 틈새로 빛이 새어나온다. <br />
-            빛은 극적으로 번쩍이기도 하고 조용한 순간을 그려내기도 한다. <br />
-            관객은 문을 처음 바라볼 때, 문을 당길 때, 문이 완전히 열렸을 때의 순서로 변화하는 표현을 마주할 수 있다.</p>
+          <p>가벽, 문과 센서, 빔 프로젝터로 구성한 작업</p>
         </div>
       </div>
       <div className="main-content">
+        <h2>작품 설명</h2>
+        <p><strong>&lt;문 열어보기&gt;</strong>는 가벽, 문과 센서, 빔 프로젝터로 구성한 작업이다. <br />
+          문을 열면 틈새로 빛이 새어나온다. <br />
+          빛은 극적으로 번쩍이기도 하고 조용한 순간을 그려내기도 한다. <br />
+          관객은 문을 처음 바라볼 때, 문을 당길 때, 문이 완전히 열렸을 때의 순서로 변화하는 표현을 마주할 수 있다.
+        </p>
+
         <h2>작품 작가노트</h2>
         <p>
-          가끔 시간이 빠르게 흐른다는 것을 깨닫는다. <br />
-          바삐 오가던 퇴근길이 문득 달라보이는 날이나, 어느새 밤바람이 차가워졌음을 알고 놀라는 때가 그렇다. <br />
+          문 밖에는 우리가 두려워하는 것들이 있다. <br />
+          나의 경우에는, 문 바깥으로 나서는 순간부터 나를 잃어가는 느낌이 두렵다. <br />
+          무의미한 시선, 빽빽한 도시의 풍경, 지하철과 선로가 맞물리는 소리나 지나가는 사람들의 웅성임…. 그래서 나는 나의 방으로 도망친다. <br />
+          방문을 꼭 닫아놓고 농성한다.<br />
           <br />
-          시간은 조금씩, 그러나 확실히 흐른다. <br />
-          가끔은 붙잡고 싶을 때가 있다. <br />
-          돌려내거나 흘려내고 싶은 적도 많다. <br />
-          <br />
-          <strong>&lt;문 열어보기&gt;</strong>는 이렇게 만들었다. <br />
-          <br />
-          <strong>&lt;문 열어보기&gt;</strong>는 관객의 신체를 강하게 연결함으로써 시간을 움직이는 비현실적 경험을 현실과 이어보는 시도이다. <br />
-          말 그대로 시간을 ‘당겨오는’ 느낌을 연출하고자 한다. <br />
-          직접, 힘들게, 무겁게! <br />
-          <br />
-          어두운 겨울밤을 흘려내면 따뜻한 봄날이 있다. <br />
+          <strong>&lt;문 열어보기&gt;</strong>는 문 밖의 세상이 두려운 아무개를 위한 작업물이다. <br />
+          그저 걷다가 바라본 하늘을 떠올리며 세상 밖을 마주해보는 것이다. 여전히 어렵지만 스스로 문을 열고 나가본다. <br />
+          멀리 가두어 둔 문 밖의 것들과 당당히 마주해 보고자 한다.
         </p>
+
         <div className="divide" />
         <h2>작품 이미지</h2>
-        <img src={Banner} style={{width: '50vw'}}></img>
+        <img src={Banner} alt='작품 이미지 01' style={{width: '50vw'}}></img>
         <p>
         </p>
       </div>

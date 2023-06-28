@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-import Banner from '../../img/banner_000.png';
+import Banner from '../../img/banner_004.jpg';
 
 
 const Artwork004 = ({ isWideScreen, isNarrowScreen }) => {
@@ -50,9 +50,8 @@ const Artwork004 = ({ isWideScreen, isNarrowScreen }) => {
   }, [isWideScreen]);
 
   return (
-    <div title="04. 고민 담아가기" description="고민 담아가기에 관한 설명">
-      <div
-        className="banner"
+    <div>
+      <div className="banner"
         ref={bannerRef}
         style={{
           backgroundImage: `url(${Banner})`,
@@ -63,11 +62,8 @@ const Artwork004 = ({ isWideScreen, isNarrowScreen }) => {
           backgroundPosition: `${isWideScreen ? '375px' : 0} ${isWideScreen ? 0 : '75px'}`,
           position: 'relative'
         }}>
-        <div
-          className="banner-overlay"
+        <div className="banner-overlay"
           style={{
-            width: '100%',
-            height: '100%',
             backdropFilter: `blur(${blurAmount}px)`,
           }} />
         <div
@@ -76,19 +72,24 @@ const Artwork004 = ({ isWideScreen, isNarrowScreen }) => {
             width: 'calc(100% - 100px)',
             left: '0',
             bottom: '0',
-            padding: '400px 50px 25px 50px',
+            padding: `${isNarrowScreen ? '400px 75px 0 25px' : '400px 50px 0 50px'}`,
             backgroundImage: `linear-gradient(transparent, rgba(0, 0, 0, 1))`,
             textShadow: '0 0 15px rgba(0, 0, 0, 0.5)',
           }}>
           <h1>04. 고민 담아가기</h1>
           <p>
-            <strong>&lt;고민 담아가기&gt;</strong>는 USB 플래시 메모리와 컴퓨터로 이루어진, &lt;당기시오&gt;에서의 경험을 마무리하는 작업이다. <br />
-            컴퓨터에 연결된 USB에는 ‘고민중’이 전시를 위해 고민해온 기록이 담겨 있다. <br />
-            관객은 USB를 하나씩 지니고 전시 &lt;당기시오&gt;를 떠난다. <br />
-            USB는 관객이 재사용할 수 있다.</p>
+            USB 플래시 메모리와 컴퓨터로 이루어진, &lt;당기시오&gt;에서의 경험을 마무리하는 작품
+          </p>
         </div>
       </div>
       <div className="main-content">
+        <h2>작품 설명</h2>
+          <p>
+            <strong>&lt;고민 담아가기&gt;</strong>는 USB 플래시 메모리와 컴퓨터로 이루어진, &lt;당기시오&gt;에서의 경험을 마무리하는 작업이다. <br />
+            컴퓨터에 연결된 USB에는 ‘고민중’이 전시를 위해 고민해 온 기록이 담겨 있다. <br />
+            관객은 USB를 하나씩 지니고 전시 &lt;당기시오&gt;를 떠난다. <br />
+            USB는 관객이 재사용할 수 있다.
+          </p>
         <h2>작품 작가노트</h2>
         <p>
           모든 사람들은 각자 다른 세상을 산다. <br />
@@ -104,7 +105,7 @@ const Artwork004 = ({ isWideScreen, isNarrowScreen }) => {
         </p>
         <div className="divide" />
         <h2>작품 이미지</h2>
-        <img src={Banner} style={{width: '50vw'}}></img>
+        <img src={Banner} alt='작품 이미지 01' style={{width: '50vw'}}></img>
         <p>
         </p>
       </div>
