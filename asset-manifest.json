@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/considering-2023diaf-web/static/css/main.356216c9.css",
-    "main.js": "/considering-2023diaf-web/static/js/main.ac9e9f58.js",
+    "main.css": "/considering-2023diaf-web/static/css/main.e4fcd944.css",
+    "main.js": "/considering-2023diaf-web/static/js/main.0ebec3e4.js",
     "static/js/787.fb798993.chunk.js": "/considering-2023diaf-web/static/js/787.fb798993.chunk.js",
     "static/media/PULL_poster.jpg": "/considering-2023diaf-web/static/media/PULL_poster.f50f28ca970178aac785.jpg",
     "static/media/banner_002.jpg": "/considering-2023diaf-web/static/media/banner_002.31f12b4bf25e31eba0bb.jpg",
@@ -15,18 +15,17 @@
     "static/media/DIAF_poster.jpg": "/considering-2023diaf-web/static/media/DIAF_poster.e2638c094f554c792ebf.jpg",
     "static/media/김태균.jpg": "/considering-2023diaf-web/static/media/김태균.9a06b5f669809cefa9fd.jpg",
     "static/media/김동호.jpg": "/considering-2023diaf-web/static/media/김동호.9c468112c2fbe6f6adc3.jpg",
-    "static/media/seoularts.png": "/considering-2023diaf-web/static/media/seoularts.b3a904c33c6b4c50dc69.png",
     "static/media/Logo_F3F3F3.png": "/considering-2023diaf-web/static/media/Logo_F3F3F3.bd1cccc38e0779fd5b52.png",
     "static/media/DIAF2023_Profile.webp": "/considering-2023diaf-web/static/media/DIAF2023_Profile.b9c77cd62ee3e0a9ee74.webp",
     "index.html": "/considering-2023diaf-web/index.html",
     "static/media/favicon_dark.svg": "/considering-2023diaf-web/static/media/favicon_dark.f743c3e3b3f0b34a81b05ed01d91605e.svg",
     "static/media/favicon_light.svg": "/considering-2023diaf-web/static/media/favicon_light.2e23ea8c23fc023d494febb6f53e371d.svg",
-    "main.356216c9.css.map": "/considering-2023diaf-web/static/css/main.356216c9.css.map",
-    "main.ac9e9f58.js.map": "/considering-2023diaf-web/static/js/main.ac9e9f58.js.map",
+    "main.e4fcd944.css.map": "/considering-2023diaf-web/static/css/main.e4fcd944.css.map",
+    "main.0ebec3e4.js.map": "/considering-2023diaf-web/static/js/main.0ebec3e4.js.map",
     "787.fb798993.chunk.js.map": "/considering-2023diaf-web/static/js/787.fb798993.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.356216c9.css",
-    "static/js/main.ac9e9f58.js"
+    "static/css/main.e4fcd944.css",
+    "static/js/main.0ebec3e4.js"
   ]
 }
