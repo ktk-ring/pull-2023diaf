@@ -20,6 +20,8 @@ const App = () => {
 
   const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 1200);
   const [isNarrowScreen, setIsNarrowScreen] = useState(window.innerWidth < 768);
+  
+  const [isTallScreen, setIsTallScreen] = useState(window.innerHeight > 1080);
 
   const [activeButton, setActiveButton] = useState('main');
 
@@ -45,18 +47,17 @@ const App = () => {
     };
   }, []);
 
-  const faviconPath = isDarkMode ? FaviconForDark : FaviconForLight;
-
   useEffect(() => {
+    const faviconPath = isDarkMode ? FaviconForDark : FaviconForLight;
     const link = document.querySelector("link[rel='icon']");
     if (link) {
       link.href = faviconPath;
     }
   }, [isDarkMode]);
   
-  // 가변폭
+  // 창 가변 크기
   useEffect(() => {
-    const handleResize = () => {
+    const handleWidthChange = () => {
       setIsWideScreen(window.innerWidth > 1200);
       setIsNarrowScreen(window.innerWidth < 768);
       if (window.innerWidth > 768) {
@@ -64,10 +65,18 @@ const App = () => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    const handleHeightChange = () => {
+      setIsTallScreen(window.innerHeight > 500);
+    };
+
+    handleWidthChange(); // 초기화
+
+    window.addEventListener('resize', handleWidthChange);
+    window.addEventListener('resize', handleHeightChange);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleWidthChange);
+      window.removeEventListener('resize', handleHeightChange);
     };
   }, []);
 
@@ -99,6 +108,7 @@ const App = () => {
                 handleButtonClick={handleButtonClick}
                 isWideScreen={isWideScreen}
                 isNarrowScreen={isNarrowScreen}
+                isTallScreen={isTallScreen}
                 setIsExpanded={setIsExpanded} />
             </div>
         </div>

@@ -57,7 +57,7 @@ const Artwork004 = ({ isWideScreen, isNarrowScreen }) => {
           backgroundImage: `url(${Banner})`,
           width: `${bannerWidth}px`,
           height: `${bannerHeight}px`,
-          maxHeight: '1000px',
+          maxHeight: '800px',
           backgroundSize: `${bannerWidth}px ${bannerHeight}px`, // 배경 이미지 크기 조절
           backgroundPosition: `${isWideScreen ? '375px' : 0} ${isWideScreen ? 0 : '75px'}`,
           position: 'relative'

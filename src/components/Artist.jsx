@@ -2,7 +2,8 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import logo from '../img/seoularts.png';
+import Instagram from '../img/Instagram.png';
+import YouTube from '../img/YouTube.png';
 
 import 이세찬 from '../img/이세찬.jpg';
 import 양선아 from '../img/양선아.jpg';
@@ -19,7 +20,7 @@ const Artists = () => {
 
         <div className='divide' />
 
-        <h2>팀 소개</h2>
+        {/* <h2>팀 소개</h2>
         <h3>고민중</h3>
         <h4>CONSIDERING</h4>
         <p>팀 고민중은 미디어아트 작가로서 현대사회의 당위적인 가치와 미적 경험에 대한 고민을 표현하는 예술 작품을 창조하는 예술가들의 모임이다.<br />
@@ -34,11 +35,9 @@ const Artists = () => {
           팀 고민중의 &lt;당기시오&gt;는 창조적이고 혁신적인 미디어아트 작품으로서, 예술과 기술의 경계를 모호하게 만들면서 관객에게 새로운 시각과 경험을 제공한다.<br />
           &lt;당기시오&gt;는 팀 고민중의 예술적 열망과 도전적인 정신을 표현하는 작품들의 집합체로서, 관객들에게 영감과 환기를 주며, 예술과 사회의 상호작용을 통해 더 나은 미래를 모색하고자 한다.
           <br /><br />
-          <strong>위 문장들은 ChatGPT를 통해 임의로 생성한 더미 텍스트입니다.<br />
-            !! 확정된 문구 아님 !!</strong>
         </p>
 
-        <div className='divide' />
+        <div className='divide' /> */}
 
         <h2>작가 소개</h2>
 
@@ -60,7 +59,7 @@ const Artists = () => {
               target='blank' rel='noreferrer noopener'
               className='button'
               style={{ display: 'flex', margin: 0 }}>
-              <img src={logo} alt='Instagram' className='external-link' />
+              <img src={Instagram} alt='Instagram' className='external-link' />
               인스타그램
             </Link>
             <Link title='유튜브 1IL 일세찬'
@@ -68,7 +67,7 @@ const Artists = () => {
               target='blank' rel='noreferrer noopener'
               className='button'
               style={{ display: 'flex', margin: 0 }}>
-              <img src={logo} alt='Instagram' className='external-link' />
+              <img src={YouTube} alt='YouTube' className='external-link' />
               유튜브
             </Link>
           </div>
@@ -92,7 +91,7 @@ const Artists = () => {
               target='blank' rel='noreferrer noopener'
               className='button'
               style={{ display: 'flex', margin: 0 }}>
-              <img src={logo} alt='Instagram' className='external-link' />
+              <img src={Instagram} alt='Instagram' className='external-link' />
               인스타그램
             </Link>
 
@@ -116,7 +115,7 @@ const Artists = () => {
               target='blank' rel='noreferrer noopener'
               className='button'
               style={{ display: 'flex', margin: 0 }}>
-              <img src={logo} alt='Instagram' className='external-link' />
+              <img src={Instagram} alt='Instagram' className='external-link' />
               인스타그램
             </Link>
           </div>
@@ -140,16 +139,8 @@ const Artists = () => {
               target='blank' rel='noreferrer noopener'
               className='button'
               style={{ display: 'flex', margin: 0 }}>
-              <img src={logo} alt='Instagram' className='external-link' />
+              <img src={Instagram} alt='Instagram' className='external-link' />
               인스타그램
-            </Link>
-            <Link title='유튜브 사금'
-              to='https://youtube.com/@user-fk7be1gc7j'
-              target='blank' rel='noreferrer noopener'
-              className='button'
-              style={{ display: 'flex', margin: 0 }}>
-              <img src={logo} alt='Instagram' className='external-link' />
-              유튜브
             </Link>
 
           </div>
@@ -174,7 +165,7 @@ const Artists = () => {
               target='blank' rel='noreferrer noopener'
               className='button'
               style={{ display: 'flex', margin: 0 }}>
-              <img src={logo} alt='Instagram' className='external-link' />
+              <img src={Instagram} alt='Instagram' className='external-link' />
               인스타그램
             </Link>
             <Link title='유튜브 반지 RING'
@@ -182,7 +173,7 @@ const Artists = () => {
               target='blank' rel='noreferrer noopener'
               className='button'
               style={{ display: 'flex', margin: 0 }}>
-              <img src={logo} alt='Instagram' className='external-link' />
+              <img src={YouTube} alt='YouTube' className='external-link' />
               유튜브
             </Link>
           </div>

@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Banner from '../../img/banner_000.jpg';
 
 
-const Artwork000 = ({ isWideScreen }) => {
+const Artwork000 = ({ isWideScreen, isNarrowScreen }) => {
   const bannerRef = useRef(null);
   const [bannerWidth, setBannerWidth] = useState((isWideScreen ? window.innerWidth - 375 : window.innerWidth));
   const [bannerHeight, setBannerHeight] = useState(0);
@@ -57,7 +57,7 @@ const Artwork000 = ({ isWideScreen }) => {
           backgroundImage: `url(${Banner})`,
           width: `${bannerWidth}px`,
           height: `${bannerHeight}px`,
-          maxHeight: '1000px',
+          maxHeight: '800px',
           backgroundSize: `${bannerWidth}px ${bannerHeight}px`, // 배경 이미지 크기 조절
           backgroundPosition: `${isWideScreen ? '375px' : 0} ${isWideScreen ? 0 : '75px'}`,
           position: 'relative'
@@ -74,7 +74,7 @@ const Artwork000 = ({ isWideScreen }) => {
             width: 'calc(100% - 100px)',
             left: '0',
             bottom: '0',
-            padding: '400px 50px 0 50px',
+            padding: `${isNarrowScreen ? '400px 75px 0 25px' : '400px 50px 0 50px'}`,
             backgroundImage: `linear-gradient(transparent, rgba(0, 0, 0, 1))`,
             textShadow: '0 0 15px rgba(0, 0, 0, 0.5)',
           }}>

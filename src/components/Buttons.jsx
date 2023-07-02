@@ -6,7 +6,7 @@ import DIAF2023 from '../img/DIAF2023_Profile.webp';
 import Instagram from '../img/Instagram.png';
 import YouTube from '../img/YouTube.png';
 
-const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen, setIsExpanded }) => {
+const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen, isTallScreen, setIsExpanded }) => {
 
   return (
     <div className={`${!isNarrowScreen ? 'menu' : 'menu-narrow'}`}>
@@ -89,35 +89,56 @@ const Buttons = ({ activeButton, handleButtonClick, isWideScreen, isNarrowScreen
       {isWideScreen && (
         <div style={{ width: '100%' }}>
           <div className="category">관련 웹사이트</div>
-
-          <Link to="https://www.youtube.com/@DIAF_ENTER"
+          <div style={{ display: `${!isTallScreen && 'flex'}` }}>
+          <Link to="https://www.2023diaf-multipairing.com/"
+            title= '디지털아트페스티벌 웹사이트'
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={DIAF2023} alt="DIAF" className="external-link"
-              style={{ borderRadius: '25%' }} />
-            디지털아트페스티벌 웹사이트
+            <img src={DIAF2023} alt="DIAF" 
+              className="external-link"
+              style={{
+                marginRight: `${!isTallScreen && 0}`,  borderRadius: '25%' 
+              }}/>
+            {isTallScreen ? '디지털아트페스티벌 웹사이트' : ''}
           </Link>
 
           <Link to="https://www.youtube.com/@DIAF_MULTI-PAIRING"
+            title= '디지털아트페스티벌 유튜브'
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={YouTube} alt="YouTube" className="external-link" />
-            디지털아트페스티벌 유튜브
+            <img src={YouTube} alt="YouTube" 
+              className="external-link"
+              style={{
+                marginRight: `${!isTallScreen && 0}`
+              }}/>
+            {isTallScreen ? '디지털아트페스티벌 유튜브' : ''}
           </Link>
 
           <Link to="https://instagram.com/digitalartsfestival_sia"
+            title= '디지털아트페스티벌 인스타그램'
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={Instagram} alt="Instagram" className="external-link" />
-            디지털아트페스티벌 인스타그램
+            <img src={Instagram} alt="Instagram" 
+              className="external-link"
+              style={{
+                marginRight: `${!isTallScreen && 0}`
+              }}/>
+            {isTallScreen ? '디지털아트페스티벌 인스타그램' : ''}
           </Link>
 
           <Link to="https://instagram.com/sia_digitalart"
+            title= '디지털아트 전공 인스타그램'
             target="blank" rel="noreferrer noopener"
             className="button">
-            <img src={Instagram} alt="Instagram" className="external-link" />
-            디지털아트 전공 학회 인스타그램
+            <img src={Instagram} alt="Instagram" 
+              className="external-link"
+              style={{
+                marginRight: `${!isTallScreen && 0}`,
+                justifyContent: 'center'
+              }}/>
+            {isTallScreen ? '디지털아트 전공 인스타그램' : ''}
           </Link>
+          </div>
         </div>
       )}
     </div>
