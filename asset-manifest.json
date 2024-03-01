@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/considering-2023diaf-web/static/css/main.e4fcd944.css",
-    "main.js": "/considering-2023diaf-web/static/js/main.1ed5e2a4.js",
+    "main.js": "/considering-2023diaf-web/static/js/main.bcf7adad.js",
     "static/js/787.fb798993.chunk.js": "/considering-2023diaf-web/static/js/787.fb798993.chunk.js",
     "static/media/img_01.JPG": "/considering-2023diaf-web/static/media/img_01.00752fde9009bc4517d7.JPG",
     "static/media/img_06.JPG": "/considering-2023diaf-web/static/media/img_06.1ea791a969c5788452bb.JPG",
@@ -35,11 +35,11 @@
     "static/media/favicon_dark.svg": "/considering-2023diaf-web/static/media/favicon_dark.f743c3e3b3f0b34a81b05ed01d91605e.svg",
     "static/media/favicon_light.svg": "/considering-2023diaf-web/static/media/favicon_light.2e23ea8c23fc023d494febb6f53e371d.svg",
     "main.e4fcd944.css.map": "/considering-2023diaf-web/static/css/main.e4fcd944.css.map",
-    "main.1ed5e2a4.js.map": "/considering-2023diaf-web/static/js/main.1ed5e2a4.js.map",
+    "main.bcf7adad.js.map": "/considering-2023diaf-web/static/js/main.bcf7adad.js.map",
     "787.fb798993.chunk.js.map": "/considering-2023diaf-web/static/js/787.fb798993.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e4fcd944.css",
-    "static/js/main.1ed5e2a4.js"
+    "static/js/main.bcf7adad.js"
   ]
 }
