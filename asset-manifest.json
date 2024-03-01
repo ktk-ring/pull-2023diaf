@@ -1,15 +1,29 @@
 {
   "files": {
     "main.css": "/considering-2023diaf-web/static/css/main.e4fcd944.css",
-    "main.js": "/considering-2023diaf-web/static/js/main.26190efa.js",
+    "main.js": "/considering-2023diaf-web/static/js/main.1ed5e2a4.js",
     "static/js/787.fb798993.chunk.js": "/considering-2023diaf-web/static/js/787.fb798993.chunk.js",
+    "static/media/img_01.JPG": "/considering-2023diaf-web/static/media/img_01.00752fde9009bc4517d7.JPG",
+    "static/media/img_06.JPG": "/considering-2023diaf-web/static/media/img_06.1ea791a969c5788452bb.JPG",
+    "static/media/img_11.JPG": "/considering-2023diaf-web/static/media/img_11.1739f93c5500ba663cfd.JPG",
+    "static/media/img_02.JPG": "/considering-2023diaf-web/static/media/img_02.7525629d017cbfdd20be.JPG",
+    "static/media/img_05.JPG": "/considering-2023diaf-web/static/media/img_05.89d49e87564090ca2925.JPG",
+    "static/media/img_03.JPG": "/considering-2023diaf-web/static/media/img_03.9a3f22daf55828a7a881.JPG",
+    "static/media/banner_000.JPG": "/considering-2023diaf-web/static/media/banner_000.c47513db5072d6cdedf9.JPG",
+    "static/media/img_07.JPG": "/considering-2023diaf-web/static/media/img_07.340c31697652db9e7a0e.JPG",
+    "static/media/img_08.JPG": "/considering-2023diaf-web/static/media/img_08.0654840a6a26d4125b25.JPG",
+    "static/media/banner_004.JPG": "/considering-2023diaf-web/static/media/banner_004.a86a048dca2689fd4f7c.JPG",
+    "static/media/img_10.JPG": "/considering-2023diaf-web/static/media/img_10.653222b299fb5116f14d.JPG",
+    "static/media/img_04.JPG": "/considering-2023diaf-web/static/media/img_04.f0d50093477734bea315.JPG",
+    "static/media/banner_002.JPG": "/considering-2023diaf-web/static/media/banner_002.6053c732bf6714c2cd3a.JPG",
+    "static/media/banner_artist.jpg": "/considering-2023diaf-web/static/media/banner_artist.c71c1dcaf0e19d4d9812.jpg",
+    "static/media/img_09.JPG": "/considering-2023diaf-web/static/media/img_09.71d5c5869c2c5aee478d.JPG",
+    "static/media/banner_001.JPG": "/considering-2023diaf-web/static/media/banner_001.6f437730b418d9e1eb7b.JPG",
+    "static/media/banner_statement.JPG": "/considering-2023diaf-web/static/media/banner_statement.8ba23aae840986b989e2.JPG",
     "static/media/PULL_poster.jpg": "/considering-2023diaf-web/static/media/PULL_poster.f50f28ca970178aac785.jpg",
-    "static/media/banner_002.jpg": "/considering-2023diaf-web/static/media/banner_002.31f12b4bf25e31eba0bb.jpg",
-    "static/media/banner_004.jpg": "/considering-2023diaf-web/static/media/banner_004.83a27cc58d09f5f71857.jpg",
     "static/media/Instagram.png": "/considering-2023diaf-web/static/media/Instagram.b50ea4da5dfb577bdfe6.png",
     "static/media/이은정.jpg": "/considering-2023diaf-web/static/media/이은정.3d60137e1d474df36420.jpg",
-    "static/media/banner_000.jpg": "/considering-2023diaf-web/static/media/banner_000.810c7590f87dc5f14611.jpg",
-    "static/media/banner_001.jpg": "/considering-2023diaf-web/static/media/banner_001.69188be1287423f4e194.jpg",
+    "static/media/img_01.jpg": "/considering-2023diaf-web/static/media/img_01.810c7590f87dc5f14611.jpg",
     "static/media/이세찬.jpg": "/considering-2023diaf-web/static/media/이세찬.6fba69000d99021d9981.jpg",
     "static/media/양선아.jpg": "/considering-2023diaf-web/static/media/양선아.a19d9a16ca24bd8d5960.jpg",
     "static/media/DIAF_poster.jpg": "/considering-2023diaf-web/static/media/DIAF_poster.e2638c094f554c792ebf.jpg",
@@ -21,11 +35,11 @@
     "static/media/favicon_dark.svg": "/considering-2023diaf-web/static/media/favicon_dark.f743c3e3b3f0b34a81b05ed01d91605e.svg",
     "static/media/favicon_light.svg": "/considering-2023diaf-web/static/media/favicon_light.2e23ea8c23fc023d494febb6f53e371d.svg",
     "main.e4fcd944.css.map": "/considering-2023diaf-web/static/css/main.e4fcd944.css.map",
-    "main.26190efa.js.map": "/considering-2023diaf-web/static/js/main.26190efa.js.map",
+    "main.1ed5e2a4.js.map": "/considering-2023diaf-web/static/js/main.1ed5e2a4.js.map",
     "787.fb798993.chunk.js.map": "/considering-2023diaf-web/static/js/787.fb798993.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e4fcd944.css",
-    "static/js/main.26190efa.js"
+    "static/js/main.1ed5e2a4.js"
   ]
 }
