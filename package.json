@@ -1,8 +1,8 @@
 {
-  "name": "considering-2023diaf-web",
+  "name": "pull-2023diaf",
   "version": "1.0.2",
   "private": true,
-  "homepage": "https://ktk-ring.github.io/considering-2023diaf-web",
+  "homepage": "https://ktkring.com/pull-2023diaf",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -10,6 +10,7 @@
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-native-fast-image": "^8.6.3",
     "react-router-dom": "^6.14.0",
     "react-youtube": "^10.1.0",
     "web-vitals": "^2.1.4"

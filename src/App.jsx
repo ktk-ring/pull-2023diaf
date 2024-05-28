@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
-import MainPage from './components/Main';
-import Statement from './components/Statement';
-import Artist from './components/Artist';
+import MainPage from './components/Overview/Main';
+import Statement from './components/Overview/Statement';
+import Artist from './components/Overview/Artist';
 import Artwork000 from './components/Artworks/000.Spring';
 import Artwork001 from './components/Artworks/001.Drawer';
 import Artwork002 from './components/Artworks/002.Door';
@@ -122,10 +122,14 @@ const App = () => {
       <div className="main">
         <Routes>
           <Route path="/" element={<MainPage
-          isWideScreen={isWideScreen}
-          isNarrowScreen={isNarrowScreen} />} />
-          <Route path="/statement" element={<Statement />} />
-          <Route path="/artist" element={<Artist />} />
+            isWideScreen={isWideScreen}
+            isNarrowScreen={isNarrowScreen} />} />
+          <Route path="/statement" element={<Statement
+            isWideScreen={isWideScreen}
+            isNarrowScreen={isNarrowScreen} />} />
+          <Route path="/artist" element={<Artist
+            isWideScreen={isWideScreen}
+            isNarrowScreen={isNarrowScreen} />} />
           <Route path="/000" element={<Artwork000
             isWideScreen={isWideScreen}
             isNarrowScreen={isNarrowScreen} />} />

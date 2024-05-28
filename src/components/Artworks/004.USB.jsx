@@ -1,95 +1,38 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 
-import Banner from '../../img/banner_004.jpg';
+import Banner from '../Banner';
+
+import bannerImg from '../../img/004/banner_004.JPG';
+import img01 from '../../img/004/img_01.JPG';
+import img02 from '../../img/004/img_02.JPG';
+import img03 from '../../img/004/img_03.JPG';
+import img04 from '../../img/004/img_04.JPG';
+import img05 from '../../img/004/img_05.JPG';
+import img06 from '../../img/004/img_06.JPG';
+import img07 from '../../img/004/img_07.JPG';
 
 
 const Artwork004 = ({ isWideScreen, isNarrowScreen }) => {
-  const bannerRef = useRef(null);
-  const [bannerWidth, setBannerWidth] = useState((isWideScreen ? window.innerWidth - 375 : window.innerWidth));
-  const [bannerHeight, setBannerHeight] = useState(0);
-  const [blurAmount, setBlurAmount] = useState(0);
-
-  useEffect(() => {
-    const image = new Image();
-    image.src = Banner;
-
-    image.onload = () => {
-      const width = image.width;
-      const height = image.height;
-      const calculatedWidth = (isWideScreen ? window.innerWidth - 375 : window.innerWidth); // 가로 크기 계산
-
-      setBannerWidth(calculatedWidth);
-      setBannerHeight((calculatedWidth / width) * height); // 이미지 비율에 맞게 높이 계산
-    };
-
-    const handleResize = () => {
-      const calculatedWidth = (isWideScreen ? window.innerWidth - 375 : window.innerWidth); // 가로 크기 계산
-
-      setBannerWidth(calculatedWidth);
-      setBannerHeight((calculatedWidth / image.width) * image.height); // 이미지 비율에 맞게 높이 계산
-    };
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const bannerTop = bannerRef.current.offsetTop;
-      const bannerBottom = bannerTop + bannerRef.current.offsetHeight;
-      const currentBlurAmount = (scrollY - bannerTop) / (bannerBottom - bannerTop); // 스크롤 백분율 계산
-
-      if (currentBlurAmount >= 0 && currentBlurAmount <= 1) {
-        setBlurAmount(20 * currentBlurAmount); // 스크롤 백분율을 상태에 업데이트
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [isWideScreen]);
 
   return (
     <div>
-      <div className="banner"
-        ref={bannerRef}
-        style={{
-          backgroundImage: `url(${Banner})`,
-          width: `${bannerWidth}px`,
-          height: `${bannerHeight}px`,
-          maxHeight: '800px',
-          backgroundSize: `${bannerWidth}px ${bannerHeight}px`, // 배경 이미지 크기 조절
-          backgroundPosition: `${isWideScreen ? '375px' : 0} ${isWideScreen ? 0 : '75px'}`,
-          position: 'relative'
-        }}>
-        <div className="banner-overlay"
-          style={{
-            backdropFilter: `blur(${blurAmount}px)`,
-          }} />
-        <div
-          style={{
-            position: 'absolute',
-            width: 'calc(100% - 100px)',
-            left: '0',
-            bottom: '0',
-            padding: `${isNarrowScreen ? '400px 75px 0 25px' : '400px 50px 0 50px'}`,
-            backgroundImage: `linear-gradient(transparent, rgba(0, 0, 0, 1))`,
-            textShadow: '0 0 15px rgba(0, 0, 0, 0.5)',
-          }}>
-          <h1>04. 고민 담아가기</h1>
-          <p>
-            USB 플래시 메모리와 컴퓨터로 이루어진, &lt;당기시오&gt;에서의 경험을 마무리하는 작품
-          </p>
-        </div>
-      </div>
-      <div className="main-content">
+      <Banner
+        imagePath={bannerImg} 
+        isWideScreen={isWideScreen} 
+        isNarrowScreen={isNarrowScreen} 
+        title="04. 고민 담아가기" 
+        description="USB 플래시 메모리와 컴퓨터로 이루어진, &lt;당기시오&gt;에서의 경험을 마무리하는 작품" 
+      />
+
+      <main className="main-content">
         <h2>작품 설명</h2>
-          <p>
-            <strong>&lt;고민 담아가기&gt;</strong>는 USB 플래시 메모리와 컴퓨터로 이루어진, &lt;당기시오&gt;에서의 경험을 마무리하는 작업이다. <br />
-            컴퓨터에 연결된 USB에는 ‘고민중’이 전시를 위해 고민해 온 기록이 담겨 있다. <br />
-            관객은 USB를 하나씩 지니고 전시 &lt;당기시오&gt;를 떠난다. <br />
-            USB는 관객이 재사용할 수 있다.
-          </p>
+        <p>
+          <strong>&lt;고민 담아가기&gt;</strong>는 USB 플래시 메모리와 컴퓨터로 이루어진, &lt;당기시오&gt;에서의 경험을 마무리하는 작업이다. <br />
+          컴퓨터에 연결된 USB에는 ‘고민중’이 전시를 위해 고민해 온 기록이 담겨 있다. <br />
+          관객은 USB를 하나씩 지니고 전시 &lt;당기시오&gt;를 떠난다. <br />
+          USB는 관객이 재사용할 수 있다.
+        </p>
+
         <h2>작품 작가노트</h2>
         <p>
           모든 사람들은 각자 다른 세상을 산다. <br />
@@ -105,10 +48,19 @@ const Artwork004 = ({ isWideScreen, isNarrowScreen }) => {
         </p>
         <div className="divide" />
         <h2>작품 이미지</h2>
-        <img src={Banner} alt='작품 이미지 01' style={{width: '50vw'}}></img>
+        <container style={{ justifyContent: 'center' }}>
+          <img src={bannerImg} alt='작품 이미지 00' style={{width: '25vw'}}></img>
+          <img src={img01} alt='작품 이미지 01' style={{width: '25vw'}}></img>
+          <img src={img02} alt='작품 이미지 02' style={{width: '25vw'}}></img>
+          <img src={img03} alt='작품 이미지 03' style={{width: '25vw'}}></img>
+          <img src={img04} alt='작품 이미지 04' style={{width: '25vw'}}></img>
+          <img src={img05} alt='작품 이미지 05' style={{width: '25vw'}}></img>
+          <img src={img06} alt='작품 이미지 06' style={{width: '25vw'}}></img>
+          <img src={img07} alt='작품 이미지 07' style={{width: '25vw'}}></img>
+        </container>
         <p>
         </p>
-      </div>
+      </main>
     </div>
   );
 };

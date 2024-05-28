@@ -2,7 +2,7 @@
 
 ## 웹사이트 바로가기
 
-[<img src="/src/img/Logo_shadow.png" width="50%"/>](https://ktk-ring.github.io/considering-2023diaf-web)
+[<img src="/src/img/Logo_shadow.png" width="50%"/>](https://ktkring.com/pull-2023diaf)
 - 하단에 기술된 부분을 포함한 상세 정보는 모두 아카이빙 웹사이트에 기재되어 있습니다.
 <br />
 
